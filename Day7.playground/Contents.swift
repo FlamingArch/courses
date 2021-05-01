@@ -36,3 +36,38 @@ func travelTwoParameters(action: (String,Int)-> String) {
 travelTwoParameters {
     "I'm going to \($0) at \($1)kmph"
 }
+
+func travelReturnClosure()->(String)->Void{
+    return {
+        print("I'm going to \($0)")
+    }
+}
+
+let result = travelReturnClosure()
+result("London")
+
+func getRandomNumber()-> Int {
+    Int.random(in: 1...10)
+}
+
+func makeRandomGenerator()->()->Int {
+    let function = {Int.random(in: 1...10)}
+    return function
+}
+
+let generator = makeRandomGenerator()
+let random1 = generator()
+print(random1)
+
+func travelReturnClosureCaptureVariable()->(String)->Void{
+    var counter = 1
+    return {
+        print("\(counter). I'm going to \($0)")
+        counter += 1
+    }
+}
+
+let resultNew = travelReturnClosureCaptureVariable()
+resultNew("London")
+resultNew("London")
+resultNew("London")
