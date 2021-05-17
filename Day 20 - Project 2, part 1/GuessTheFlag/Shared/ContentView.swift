@@ -13,6 +13,8 @@ struct ContentView: View {
     @State var correctAnswer = Int.random(in: 0...2)
     @State private var showingScore = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var extraMessage = "\n"
     var body: some View {
         
         ZStack {
@@ -21,7 +23,7 @@ struct ContentView: View {
                 VStack {
                     Text("Tap the flag of")
                     Text(countries[correctAnswer]).font(.largeTitle).fontWeight(.black)
-                }.foregroundColor(.white)
+                }
                 ForEach(0..<3) { number in
                     Button(action: {
                         // Flag was tapped
@@ -32,16 +34,21 @@ struct ContentView: View {
                             .shadow(color: .black, radius: 2)
                     })
                 }
+                Text("Score: \(score)")
                 Spacer()
             }
         }.alert(isPresented: $showingScore) {
-            Alert(title: Text(scoreTitle), message: Text("Your Score is ???"), dismissButton: .default(Text("Continue"))  {
+            Alert(title: Text(scoreTitle), message: Text("\(extraMessage)Your Score is \(score)"), dismissButton: .default(Text("Continue"))  {
                 self.askQuestion()
             })
-        }
+        }.foregroundColor(.white)
     }
     func flagTapped(_ number: Int) {
         scoreTitle = number == correctAnswer ? "Correct" : "Wrong"
+        extraMessage = number == correctAnswer ? "" : "Wrong! That’s the flag of \(countries[number]).\n"
+        if number == correctAnswer {
+            score += 100
+        }
         showingScore = true
     }
     
