@@ -71,6 +71,20 @@ extension View {
     }
 }
 
+struct TitleFont :ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    func titleFont() -> some View {
+        self.modifier(TitleFont())
+    }
+}
+
 struct ContentView: View {
     
     @State private var useRedBg = false
@@ -126,6 +140,9 @@ struct ContentView: View {
                     Text("R\(row) C\(col)")
                     
                 }
+                
+                Text("ViewModifier")
+                    .titleFont()
             }
         }
     }

@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+
+struct FlagView: View {
+    
+    var countries: [String]
+    var number: Int
+    
+    var body: some View {
+        
+        Image(self.countries[number]).clipShape(Capsule())
+            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+            .shadow(color: .black, radius: 2)
+        
+    }
+}
+
 struct ContentView: View {
     //    @State private var showingAlert = false
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
@@ -29,9 +44,7 @@ struct ContentView: View {
                         // Flag was tapped
                         self.flagTapped(number)
                     }, label: {
-                        Image(self.countries[number]).clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius: 2)
+                        FlagView(countries: countries, number: number)
                     })
                 }
                 Text("Score: \(score)")
@@ -58,11 +71,11 @@ struct ContentView: View {
     }
 }
 
-// struct ContentView_Previews: PreviewProvider {
-//     static var previews: some View {
-//         ContentView()
-//     }
-// }
+ struct ContentView_Previews: PreviewProvider {
+     static var previews: some View {
+         ContentView()
+     }
+ }
 
 
 //    @State private var showingAlert = false

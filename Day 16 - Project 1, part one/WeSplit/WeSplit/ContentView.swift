@@ -61,6 +61,7 @@ struct ContentView: View {
                 }
                 Section(header: Text("Total Amount")) {
                     Text("\(grandTotal, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == 4 ? .red : .primary)
                 }
             }
             .navigationTitle("WeSplit")
@@ -68,8 +69,8 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {y
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
