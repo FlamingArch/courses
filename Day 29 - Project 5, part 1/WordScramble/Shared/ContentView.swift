@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -28,8 +29,17 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
                 }
+                Text("Score: \(score)")
+                    .padding()
             }
             .onAppear(perform: startGame)
+            .toolbar {
+                Button("Restart Game") {
+                    score = 0
+                    usedWords = [String]()
+                    startGame()
+                }
+            }
             .navigationTitle(rootWord)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
@@ -40,6 +50,10 @@ struct ContentView: View {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else {
+            return
+        }
+        guard newWord != rootWord else {
+            wordError(title: "Word same as root", message: "Don't copy paste")
             return
         }
         guard isOriginal(word: answer) else {
@@ -54,7 +68,7 @@ struct ContentView: View {
             wordError(title: "Word not possible", message: "That isn't a real word")
             return
         }
-        
+        score += answer.count
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
@@ -87,10 +101,15 @@ struct ContentView: View {
     }
     
     func isReal(word: String) -> Bool {
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        return misspelledRange.location == NSNotFound
+        if (word.count <= 3) {
+            errorMessage = "Word too Short"
+            return false
+        } else {
+            let checker = UITextChecker()
+            let range = NSRange(location: 0, length: word.utf16.count)
+            let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+            return misspelledRange.location == NSNotFound
+        }
     }
     
     func wordError(title: String, message: String) {
@@ -99,13 +118,13 @@ struct ContentView: View {
         showingError = true
     }
 }
-
+//
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ContentView()
 //    }
 //}
-
+//
 //List {
 //    Section(header: Text("Section 1")) {
 //        Text("Static row 1")
@@ -123,13 +142,13 @@ struct ContentView: View {
 //    }
 //}
 //.listStyle(InsetGroupedListStyle())
-
-
+//
+//
 //List(0..<5) {
 //    Text("Dynamic row \($0)")
 //}
 //.listStyle(InsetGroupedListStyle())
-
+//
 //let people = ["Finn", "Leia", "Luke", "Rey"]
 //
 //var body: some View {
@@ -138,18 +157,18 @@ struct ContentView: View {
 //    }
 //    .listStyle(InsetGroupedListStyle())
 //}
-
+//
 //let input = "a b c"
 //let letters = input.components(separatedBy: " ")
 //let letter = letters.randomElement()
 //let trimmed = letter?.trimmingCharacters(in: .whitespacesAndNewlines)
-
+//
 //if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: ".txt"){
 //    if let fileContents = try? String(contentsOf: fileURL) {
 //
 //    }
 //}
-
+//
 //let word = "swift"
 //let checker = UITextChecker()
 //let range = NSRange(location: 0, length: word.utf16.count)
