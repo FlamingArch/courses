@@ -30,37 +30,77 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     @State private var score = 0
     @State private var extraMessage = "\n"
+    @State private var backgroundColor = Color.blue
+    
+    @State private var animRotationAngle = 0
+    // For when the answer is correct... :|
+    @State private var animOpacity = 1.0
+    // For when the answer is not correct... :/
+    @State private var animIncorrectOffset = 1.0
     var body: some View {
-        
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            LinearGradient(
+                gradient: Gradient(colors: [backgroundColor, Color.black]),
+                startPoint: .top,
+                endPoint: .bottom
+            ).edgesIgnoringSafeArea(.all).animation(.easeInOut)
             VStack(spacing: 30) {
                 VStack {
                     Text("Tap the flag of")
-                    Text(countries[correctAnswer]).font(.largeTitle).fontWeight(.black)
+                    Text(countries[correctAnswer])
+                        .font(.largeTitle)
+                        .fontWeight(.black)
                 }
                 ForEach(0..<3) { number in
-                    Button(action: {
-                        // Flag was tapped
-                        self.flagTapped(number)
-                    }, label: {
+                    Button(action: { self.flagTapped(number) }) {
                         FlagView(countries: countries, number: number)
-                    })
+                    }
+                    .opacity( number == correctAnswer ? 1 : animOpacity )
+                    .rotation3DEffect(
+                        number == correctAnswer ?
+                            Angle.degrees(Double(animRotationAngle)) :
+                            Angle.degrees(0),
+                        axis: (x: 0.0, y: 1.0, z: 0.0)
+                    )
+                    .rotationEffect(
+                        number != correctAnswer ?
+                            .degrees(-(animIncorrectOffset-1) * 25) :
+                            .degrees((animIncorrectOffset-1) * 25)
+                    )
+                    .scaleEffect(
+                        number != correctAnswer ?
+                            CGFloat(animIncorrectOffset==1.0 ? 1 : 0.7 ) :
+                            CGFloat(animIncorrectOffset)
+                    )
                 }
                 Text("Score: \(score)")
                 Spacer()
             }
-        }.alert(isPresented: $showingScore) {
+        }
+        .alert(isPresented: $showingScore) {
             Alert(title: Text(scoreTitle), message: Text("\(extraMessage)Your Score is \(score)"), dismissButton: .default(Text("Continue"))  {
+                animOpacity = 1
+                animRotationAngle = 0
+                animIncorrectOffset = 1
+                backgroundColor = .blue
                 self.askQuestion()
             })
-        }.foregroundColor(.white)
+        }
+        .foregroundColor(.white).animation(.easeIn)
     }
     func flagTapped(_ number: Int) {
         scoreTitle = number == correctAnswer ? "Correct" : "Wrong"
         extraMessage = number == correctAnswer ? "" : "Wrong! That’s the flag of \(countries[number]).\n"
         if number == correctAnswer {
+            animOpacity = 0.25
+            animRotationAngle = 360
             score += 100
+            backgroundColor = .green
+        } else {
+            withAnimation(Animation.interpolatingSpring(stiffness: 40, damping: 10).repeatCount(5, autoreverses: true)) {
+                animIncorrectOffset = 1.5
+                backgroundColor = .red
+            }
         }
         showingScore = true
     }
@@ -71,11 +111,11 @@ struct ContentView: View {
     }
 }
 
- struct ContentView_Previews: PreviewProvider {
-     static var previews: some View {
-         ContentView()
-     }
- }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
 
 //    @State private var showingAlert = false
