@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Edutainment (iOS)' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Edutainment (iOS)
+  pod 'SSSwiftUIGIFView'
+
+end
+
+target 'Edutainment (macOS)' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Edutainment (macOS)
+
+end
