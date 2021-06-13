@@ -13,6 +13,8 @@
 		34210CE0266EC01000C1DC99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34210CCB266EC00F00C1DC99 /* ContentView.swift */; };
 		34210CE1266EC01000C1DC99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34210CCC266EC01000C1DC99 /* Assets.xcassets */; };
 		34210CE2266EC01000C1DC99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34210CCC266EC01000C1DC99 /* Assets.xcassets */; };
+		3421F97F2675D936001CF76F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421F97E2675D936001CF76F /* AddView.swift */; };
+		3421F9802675D936001CF76F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421F97E2675D936001CF76F /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		34210CD9266EC01000C1DC99 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34210CDB266EC01000C1DC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34210CDC266EC01000C1DC99 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3421F97E2675D936001CF76F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			children = (
 				34210CCA266EC00F00C1DC99 /* iExpenseApp.swift */,
 				34210CCB266EC00F00C1DC99 /* ContentView.swift */,
+				3421F97E2675D936001CF76F /* AddView.swift */,
 				34210CCC266EC01000C1DC99 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -189,6 +193,7 @@
 			files = (
 				34210CDF266EC01000C1DC99 /* ContentView.swift in Sources */,
 				34210CDD266EC01000C1DC99 /* iExpenseApp.swift in Sources */,
+				3421F97F2675D936001CF76F /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 			files = (
 				34210CE0266EC01000C1DC99 /* ContentView.swift in Sources */,
 				34210CDE266EC01000C1DC99 /* iExpenseApp.swift in Sources */,
+				3421F9802675D936001CF76F /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
