@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
+    
+    @State private var toggled: Bool = false
+    
     var body: some View {
         NavigationView {
             List(missions) {mission in
@@ -23,12 +26,26 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
-                        Text(mission.formattedLaunchDate)
+                        if toggled { Text(toggled ? mission.formattedLaunchDate : "crew") }
+                        else {
+                            VStack(alignment: .leading) {
+                                ForEach(0..<mission.crew.count) { num in
+                                    if let astro = astronauts.first(where: { astronaut in
+                                        astronaut.id == mission.crew[num].name
+                                    }) {
+                                        Text(astro.name)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-            }.navigationTitle("Moonshot")
+            }
+            .navigationTitle("Moonshot")
+            .navigationBarItems(leading: Button(toggled ? "Names" : "Dates") {
+                toggled.toggle()
+            })
         }
-        
     }
 }
 
