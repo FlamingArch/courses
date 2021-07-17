@@ -7,46 +7,172 @@
 
 import SwiftUI
 
-struct ColorCyclingCircle: View {
-    var amount = 0.0
-    var steps = 100
-    var body: some View {
-        ZStack {
-            ForEach(0..<steps) { value in
-                Circle()
-                    .inset(by: CGFloat(value))
-                    //                    .strokeBorder(self.color(for:value, brightness: 1), lineWidth: 2)
-                    .strokeBorder(
-                        LinearGradient(gradient:
-                                        Gradient(colors: [
-                                            self.color(for: value, brightness: 1),
-                                            self.color(for: value, brightness: 0.5),
-                                        ]), startPoint: .top, endPoint: .bottom)
-                        , lineWidth: 2
-                    )
-                    .drawingGroup()
-            }
-        }
+struct Trapezoid: Shape {
+    var insetAmount: CGFloat
+    var animatableData: CGFloat {
+        get { insetAmount }
+        set { self.insetAmount = newValue }
     }
-    func color(for value: Int, brightness: Double) -> Color {
-        var targetHue = Double(value) / Double(self.steps) + self.amount
-        if targetHue > 1 {
-            targetHue -= 1
-        }
-        return Color(hue: targetHue, saturation: 1, brightness: brightness)
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: 0, y: rect.maxY))
+        path.addLine(to: CGPoint(x:insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX - insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: 0, y: rect.maxY))
+        return path
     }
 }
 
 struct ContentView: View {
-    @State private var colorCycle = 0.0
+    @State private var insetAmount: CGFloat = 50
+    
     var body: some View {
-        VStack {
-            ColorCyclingCircle(amount: self.colorCycle)
-                .frame(width: 300, height: 300)
-            Slider(value: $colorCycle)
-        }
+        Trapezoid(insetAmount: insetAmount)
+            .frame(width: 200, height: 100)
+            .onTapGesture {
+                withAnimation {
+                    self.insetAmount = CGFloat.random(in: 10...90)
+                }
+            }
     }
 }
+
+//struct ContentView: View {
+//    @State private var amount: CGFloat = 0.0
+//    var body: some View {
+//        VStack {
+//            Image("HarshChaturvedi")
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 200, height: 200)
+//                .saturation(Double(amount))
+//                .blur(radius: (1-amount) * 20)
+//                .opacity(Double(amount))
+//                .scaleEffect(1 + (1 - amount))
+//            Slider(value: $amount)
+//                .padding()
+//        }.frame(maxWidth:.infinity, maxHeight: .infinity).background(Color.black).edgesIgnoringSafeArea(.all)
+//    }
+//}
+
+//struct ContentView: View {
+//    @State private var amount: CGFloat = 0.0
+//    var body: some View {
+//        VStack {
+//            ZStack {
+//                Circle()
+//                    .fill(Color(red: 1, green: 0, blue: 0))
+//                    .frame(width: 200*amount)
+//                    .offset(x: -50, y: -80)
+//                    .blendMode(.screen)
+//                Circle()
+//                    .fill(Color(red: 0, green: 1, blue: 0))
+//                    .frame(width: 200*amount)
+//                    .offset(x: 50, y: -80)
+//                    .blendMode(.screen)
+//                Circle()
+//                    .fill(Color(red: 0, green: 0, blue: 1))
+//                    .frame(width: 200*amount)
+//                    .blendMode(.screen)
+//            }.frame(width: 300, height: 300)
+//
+//            Slider(value: $amount)
+//                .padding()
+//        }.frame(maxWidth:.infinity, maxHeight: .infinity).background(Color.black).edgesIgnoringSafeArea(.all)
+//    }
+//}
+
+//struct ContentView: View {
+//    @State private var amount: CGFloat = 0.0
+//    var body: some View {
+//        VStack {
+//            ZStack {
+//                Circle()
+//                    .fill(Color.red)
+//                    .frame(width: 200*amount)
+//                    .offset(x: -50, y: -80)
+//                    .blendMode(.screen)
+//                Circle()
+//                    .fill(Color.green)
+//                    .frame(width: 200*amount)
+//                    .offset(x: 50, y: -80)
+//                    .blendMode(.screen)
+//                Circle()
+//                    .fill(Color.blue)
+//                    .frame(width: 200*amount)
+//                    .blendMode(.screen)
+//            }.frame(width: 300, height: 300)
+//
+//            Slider(value: $amount)
+//                .padding()
+//        }.frame(maxWidth:.infinity, maxHeight: .infinity).background(Color.black).edgesIgnoringSafeArea(.all)
+//    }
+//}
+
+//struct ContentView: View {
+//    var body: some View {
+//        Image("HarshChaturvedi")
+//            .resizable().scaledToFit()
+//            .colorMultiply(.red)
+//    }
+//}
+
+//struct ContentView: View {
+//    var body: some View {
+//        ZStack {
+//            Image("HarshChaturvedi")
+//                .resizable()
+//                .scaledToFit()
+//            Rectangle()
+//                .fill(Color.red)
+//                .blendMode(.multiply)
+//        }
+//        .frame(width: 400, height: 400)
+//        .clipped()
+//    }
+//}
+
+//struct ColorCyclingCircle: View {
+//    var amount = 0.0
+//    var steps = 100
+//    var body: some View {
+//        ZStack {
+//            ForEach(0..<steps) { value in
+//                Circle()
+//                    .inset(by: CGFloat(value))
+//                    //                    .strokeBorder(self.color(for:value, brightness: 1), lineWidth: 2)
+//                    .strokeBorder(
+//                        LinearGradient(gradient:
+//                                        Gradient(colors: [
+//                                            self.color(for: value, brightness: 1),
+//                                            self.color(for: value, brightness: 0.5),
+//                                        ]), startPoint: .top, endPoint: .bottom)
+//                        , lineWidth: 2
+//                    )
+//                    .drawingGroup()
+//            }
+//        }
+//    }
+//    func color(for value: Int, brightness: Double) -> Color {
+//        var targetHue = Double(value) / Double(self.steps) + self.amount
+//        if targetHue > 1 {
+//            targetHue -= 1
+//        }
+//        return Color(hue: targetHue, saturation: 1, brightness: brightness)
+//    }
+//}
+//
+//struct ContentView: View {
+//    @State private var colorCycle = 0.0
+//    var body: some View {
+//        VStack {
+//            ColorCyclingCircle(amount: self.colorCycle)
+//                .frame(width: 300, height: 300)
+//            Slider(value: $colorCycle)
+//        }
+//    }
+//}
 
 //struct ColorCyclingView: View {
 //    var amount = 0.0
