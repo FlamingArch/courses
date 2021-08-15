@@ -10,20 +10,23 @@ import Foundation
 struct Habit: Identifiable {
     var id = UUID()
     var title: String
-    var count: Int
+    var description: String
+    var completed: Int
     
-    mutating func increaseCount() { count += 1 }
-    
-    init(_ title: String) {
-        self.title = title
-        self.count = 0
-    }
+    mutating func increaseCompleted() { completed+=1 }
 }
 
-class HabitsController: ObservableObject {
-    @Published var habits = [Habit]()
+class HabitsController : ObservableObject {
+    @Published var habits: [Habit] = []
     
-    func newHabit(_ title: String) { habits.append(Habit(title)) }
+    func addHabit(_ title: String, _ description: String) {
+        habits.append(Habit(title: title, description: description, completed: 0))
+    }
     
-    func increaseCount(index: Int) { habits[index].increaseCount() }
+    func increaseCompleted(_ habit: Habit) {
+        if let index = habits.firstIndex(where: { habit.id == $0.id })
+        {
+            habits[index].increaseCompleted()
+        } else { print("Unable to increase count") }
+    }
 }

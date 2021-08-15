@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct habitsApp: App {
+    
+    @ObservedObject var controller = HabitsController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(controller: controller)
         }
     }
 }

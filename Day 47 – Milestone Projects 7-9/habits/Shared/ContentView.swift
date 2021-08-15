@@ -8,46 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var HC = HabitsController()
-    @State private var showingAddScreen = false
+    
+    @ObservedObject var controller: HabitsController
+    @State private var showingAddView = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(HC.habits) { habit in
-                    HStack(alignment: .center) {
-                        Text(habit.title).font(.title).padding()
-                        Spacer()
-                        Text(String(habit.count)).padding()
-                    }.onTapGesture(perform: habit.increaseCount)
+                ForEach(controller.habits) { habit in
+                    NavigationLink(destination: HabitView(habitIndex: controller.habits.firstIndex(where: {
+                        $0.id == habit.id
+                    })!, controller: controller)) {
+                        VStack(alignment: .leading) {
+                            Text(habit.title).font(.headline)
+                                .foregroundColor(Color(hue: Double.random(in: 0..<1.0), saturation: 0.8, brightness: 0.8))
+                            Text("Completed \(habit.completed) Times").foregroundColor(.secondary)
+                        }
+                    }
                 }
-            }.navigationTitle("Habits")
-            .toolbar { Button { showingAddScreen.toggle() } label: { Image(systemName: "plus") } }
-            .sheet(isPresented: $showingAddScreen) { AddScreen(HC:HC) }
-        }
-    }
-}
-
-struct AddScreen: View {
-    @ObservedObject var HC: HabitsController
-    @Environment(\.presentationMode) var presentationMode
-    @State private var titleInput = ""
-    var body: some View {
-        NavigationView {
-            Form {
-                TextField("Title",text: $titleInput)
-            }.toolbar{
-                Button("Done") {
-                    HC.newHabit(titleInput)
-                    presentationMode.wrappedValue.dismiss()
-                }
+            }
+            .navigationTitle("Habits")
+            .toolbar {
+                Button { showingAddView.toggle() } label: {Image(systemName: "plus")}
+            }
+            .sheet(isPresented: $showingAddView) {
+                AddView(controller: controller)
             }
         }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+
