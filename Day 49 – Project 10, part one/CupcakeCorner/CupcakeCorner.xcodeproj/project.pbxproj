@@ -13,6 +13,12 @@
 		3405845826CCC5BB00354F19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405844326CCC5BA00354F19 /* ContentView.swift */; };
 		3405845926CCC5BB00354F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3405844426CCC5BA00354F19 /* Assets.xcassets */; };
 		3405845A26CCC5BB00354F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3405844426CCC5BA00354F19 /* Assets.xcassets */; };
+		3454B82026CE2921009825E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B81F26CE2921009825E9 /* Order.swift */; };
+		3454B82126CE2921009825E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B81F26CE2921009825E9 /* Order.swift */; };
+		3454B82326CE2B0E009825E9 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B82226CE2B0E009825E9 /* AddressView.swift */; };
+		3454B82426CE2B0E009825E9 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B82226CE2B0E009825E9 /* AddressView.swift */; };
+		3454B82626CE2BBF009825E9 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B82526CE2BBF009825E9 /* CheckoutView.swift */; };
+		3454B82726CE2BBF009825E9 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454B82526CE2BBF009825E9 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,9 @@
 		3405845126CCC5BB00354F19 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3405845326CCC5BB00354F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3405845426CCC5BB00354F19 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3454B81F26CE2921009825E9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		3454B82226CE2B0E009825E9 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		3454B82526CE2BBF009825E9 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,9 @@
 			children = (
 				3405844226CCC5BA00354F19 /* CupcakeCornerApp.swift */,
 				3405844326CCC5BA00354F19 /* ContentView.swift */,
+				3454B81F26CE2921009825E9 /* Order.swift */,
+				3454B82226CE2B0E009825E9 /* AddressView.swift */,
+				3454B82526CE2BBF009825E9 /* CheckoutView.swift */,
 				3405844426CCC5BA00354F19 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -187,6 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3454B82026CE2921009825E9 /* Order.swift in Sources */,
+				3454B82326CE2B0E009825E9 /* AddressView.swift in Sources */,
+				3454B82626CE2BBF009825E9 /* CheckoutView.swift in Sources */,
 				3405845726CCC5BB00354F19 /* ContentView.swift in Sources */,
 				3405845526CCC5BB00354F19 /* CupcakeCornerApp.swift in Sources */,
 			);
@@ -196,6 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3454B82126CE2921009825E9 /* Order.swift in Sources */,
+				3454B82426CE2B0E009825E9 /* AddressView.swift in Sources */,
+				3454B82726CE2BBF009825E9 /* CheckoutView.swift in Sources */,
 				3405845826CCC5BB00354F19 /* ContentView.swift in Sources */,
 				3405845626CCC5BB00354F19 /* CupcakeCornerApp.swift in Sources */,
 			);
