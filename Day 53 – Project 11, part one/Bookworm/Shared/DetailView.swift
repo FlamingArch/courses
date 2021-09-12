@@ -36,6 +36,9 @@ struct DetailView: View {
                 Text(self.book.review ?? "No review")
                     .padding()
                 
+                Text(getFormattedDate(self.book.date ?? Date()))
+                    .foregroundColor(.secondary)
+                
                 RatingView(rating: .constant(Int(self.book.rating)))
                     .font(.largeTitle)
                 
@@ -48,6 +51,13 @@ struct DetailView: View {
                 self.deleteBook()
             }, secondaryButton: .cancel())
         })
+    }
+    
+    func getFormattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter.string(from: date)
     }
     
     func deleteBook() {
