@@ -10,6 +10,7 @@ import SwiftUI
 struct CheckoutView: View {
     @ObservedObject var order: Order
     
+    @State private var confirmationTitle = ""
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
@@ -25,7 +26,7 @@ struct CheckoutView: View {
                 }
                 .frame(height: 233)
                 
-                Text("Yout total is \(order.cost, format: .currency(code: "USD"))")
+                Text("Yout total is \(order.model.cost, format: .currency(code: "USD"))")
                     .font(.title)
                 
                 Button("Place Order") {
@@ -38,7 +39,7 @@ struct CheckoutView: View {
         }
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Thank you!", isPresented: $showingConfirmation) {
+        .alert(confirmationTitle, isPresented: $showingConfirmation) {
             Button("OK") { showingConfirmation = false }
         } message: {
             Text(confirmationMessage)
@@ -60,9 +61,13 @@ struct CheckoutView: View {
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type]) is successful"
+            confirmationTitle = "Thank You!"
+            confirmationMessage = "Your order for \(decodedOrder.model.quantity)x \(Order.OrderModel.types[decodedOrder.model.type]) is successful"
             showingConfirmation = true
         } catch {
+            confirmationTitle = "Error!"
+            confirmationMessage = "Order Failed!"
+            showingConfirmation = true
             print("Checkout Failed")
         }
     }
