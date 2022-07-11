@@ -1,0 +1,12 @@
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/bin/Debug/netcoreapp3.1/firstApp.deps.json
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/bin/Debug/netcoreapp3.1/firstApp.runtimeconfig.json
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/bin/Debug/netcoreapp3.1/firstApp.runtimeconfig.dev.json
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/bin/Debug/netcoreapp3.1/firstApp.dll
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/bin/Debug/netcoreapp3.1/firstApp.pdb
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.csprojAssemblyReference.cache
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.AssemblyInfoInputs.cache
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.AssemblyInfo.cs
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.csproj.CoreCompileInputs.cache
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.dll
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.pdb
+/Users/harshchaturvedi/OneDrive/Source/Projects/Study/C# 8.0 in a Nutshell/firstApp/obj/Debug/netcoreapp3.1/firstApp.genruntimeconfig.cache

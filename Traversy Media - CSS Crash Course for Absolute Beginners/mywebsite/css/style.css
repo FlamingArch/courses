@@ -1,0 +1,125 @@
+body {
+  background-color: #F2F4Fe;
+  color: #4e4d4f;
+  font-family: "Manrope", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#main-header {
+  background-color: aqua;
+  color: black;
+  -webkit-text-fill-color: aqua; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: 900;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  background-color: #ffe600;
+  color: white;
+  margin: auto;
+}
+
+#navbar ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+#showcase {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  position: center right;
+  min-height: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+  -webkit-text-fill-color: rgba(0, 255, 255, 0); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.6em;
+  padding-top: 30px;
+}
+
+#main {
+  float: left;
+  width: 60%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: left;
+  width: 30%;
+  background: #ffe600;
+  color: #000;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 16px rgba(255, 208, 0, 0.705);
+  border-radius: 1.2rem;
+  margin: 20px;
+}
+
+#main-footer {
+  background: #ffe600;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 8px 16px rgba(255, 208, 0, 0.705);
+  /* position: absolute; */
+  margin: 20px;
+  border-radius: 1.2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  #main {
+    width: 100%;
+    float: none;
+  }
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+}
+
+.fabutton {
+    width: 72px;
+    height: 72px;
+    background-color: #000;
+    clip-path: circle();
+    color: #F2F4Fe;
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    position: fixed;
+    right: 24;
+    top: 20;
+}

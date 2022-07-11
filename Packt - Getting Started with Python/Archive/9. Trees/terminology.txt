@@ -1,0 +1,12 @@
+Node: Each Member/Unit/Cell in a tree.
+Root Node: First Node at the beginning of the tree.
+Sub-Tree: A tree as a decendent of some another parent tree.
+Degree: The number of sub-trees in a given Node. Tree with only one node has a degree of 0. This single node is also considered as a tree.
+Leaf Node: Node with a degree of 0
+Edge: Connection between two nodes. Can also connect a node to itself, forming a loop.
+Parnet: A node which further connect nodes is called the parent node of the nodes it connects.
+Child: A node connected to it's parent.
+Siblings: Nodes with same parents are called siblings.
+Level: The total number of connections from root node to that node is called it's level. Root node is at level 0.
+Height of the tree: The highest number of levels in a tree.
+Depth: Total Number of edges from root of the tree to that node.
