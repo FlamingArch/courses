@@ -1,0 +1,13 @@
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.exe
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.deps.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.runtimeconfig.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.runtimeconfig.dev.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\bin\Debug\netcoreapp3.1\Value Types.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.csprojAssemblyReference.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Value Types\Value Types\obj\Debug\netcoreapp3.1\Value Types.genruntimeconfig.cache

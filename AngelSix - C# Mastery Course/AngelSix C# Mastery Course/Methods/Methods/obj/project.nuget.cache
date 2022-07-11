@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "I8suslf7MRNpqW66uMFOXXjdpt8rVZ+WywfV3gUIRSfihmflZeEsn/jUuQxibD/79SmLbJDGyGv8NJm+Tcai6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\harsh\\OneDrive\\Source\\Projects\\Study\\AngelSix C# Mastery Course\\Methods\\Methods\\Methods.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\harsh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

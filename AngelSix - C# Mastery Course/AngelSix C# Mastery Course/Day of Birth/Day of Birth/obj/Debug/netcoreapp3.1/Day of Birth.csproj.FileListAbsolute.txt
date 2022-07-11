@@ -1,0 +1,13 @@
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.exe
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.deps.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.runtimeconfig.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.runtimeconfig.dev.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\bin\Debug\netcoreapp3.1\Day of Birth.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.csprojAssemblyReference.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\AngelSix C# Mastery Course\Day of Birth\Day of Birth\obj\Debug\netcoreapp3.1\Day of Birth.genruntimeconfig.cache
