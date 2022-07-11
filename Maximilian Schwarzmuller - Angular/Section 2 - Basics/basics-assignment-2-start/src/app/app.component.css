@@ -1,0 +1,25 @@
+.button-warning {
+  margin-left: 8px;
+  padding: 4px 24px;
+  border: none;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.32);
+  color: red;
+  background-color: white;
+  transition: all 150ms ease-out;
+  border-radius: 6px;
+  text-transform: uppercase;
+  pointer-events: all;
+}
+
+.button-warning:hover {
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.24);
+  transform: scale(1.2);
+  background: red;
+  color: white;
+}
+
+.button-warning:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+

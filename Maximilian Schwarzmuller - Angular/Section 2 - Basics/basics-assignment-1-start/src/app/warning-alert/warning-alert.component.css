@@ -1,0 +1,9 @@
+.warning-container {
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    color: white;
+    background: red;
+    box-shadow: 0px 8px 16px rgba(255, 0, 0, 0.56);
+  }
+  

@@ -1,0 +1,7 @@
+.success-container {
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background: greenyellow;
+  box-shadow: 0px 8px 16px rgba(173, 255, 47, 0.56);
+}
