@@ -1,0 +1,21 @@
+
+  body {
+    background-color: #EAF6F6;
+    font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+  }
+  h1 {
+    color: #66BFBF;
+    font-weight: 200;
+  }
+  h3 {
+    color: #66BFBF;
+    font-weight: 700;
+  }
+  hr {
+    height: 2px;
+    width: 10%;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: thick;
+    border-color: grey;
+  }

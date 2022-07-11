@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JKa5jGvTYCFcjZinBIjo9M8Pygnobl5+yHE44P8XXS9fYJuvUk7ZeF0yk8gNhXwia0LQUU/g5vri+4KTm8PMhg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\harsh\\OneDrive\\Source\\Projects\\Study\\C# 7.0 All-in-One for Dummies\\Chapter 7 - Stepping through Collections\\Feather UI\\Feather UI\\Feather UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\harsh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,127 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\harsh> wsl
+┏━(Message from Kali developers)
+┃
+┃ This is a minimal installation of Kali Linux, you likely
+┃ want to install supplementary tools. Learn how:
+┃ ⇒ https://www.kali.org/docs/troubleshooting/common-minimum-setup/
+┃
+┗━(Run: “touch ~/.hushlogin” to hide this message)
+flamingarch@RedFalcon:/mnt/c/Users/harsh$ ^C
+flamingarch@RedFalcon:/mnt/c/Users/harsh$ ^C
+flamingarch@RedFalcon:/mnt/c/Users/harsh$ ^C
+flamingarch@RedFalcon:/mnt/c/Users/harsh$
+logout
+MongoDB shell version v4.4.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("d80d819b-ce44-4039-b209-7e4cddd35d8e") }
+MongoDB server version: 4.4.6
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+        https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2021-07-07T00:41:54.418+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> ^C
+bye
+PS C:\Users\harsh> mongo.exe --version
+MongoDB shell version v4.4.6
+Build Info: {
+    "version": "4.4.6",
+    "gitVersion": "72e66213c2c3eab37d9358d5e78ad7f5c1d0d0d7",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}
+PS C:\Users\harsh> mongod
+{"t":{"$date":"2021-07-07T00:45:02.848+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-07-07T00:45:02.856+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-07-07T00:45:02.857+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-07-07T00:45:02.859+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":15048,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"RedFalcon"}}
+{"t":{"$date":"2021-07-07T00:45:02.859+05:30"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2021-07-07T00:45:02.859+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.6","gitVersion":"72e66213c2c3eab37d9358d5e78ad7f5c1d0d0d7","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-07-07T00:45:02.859+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19043)"}}}
+{"t":{"$date":"2021-07-07T00:45:02.859+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-07-07T00:45:02.862+05:30"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=15789M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress,compact_progress],"}}
+{"t":{"$date":"2021-07-07T00:45:02.904+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598902:903163][15048:140712047170896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global recovery timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:45:02.904+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598902:904197][15048:140712047170896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global oldest timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:45:02.913+05:30"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":51}}
+{"t":{"$date":"2021-07-07T00:45:02.914+05:30"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:45:02.927+05:30"},"s":"I",  "c":"STORAGE",  "id":4366408, "ctx":"initandlisten","msg":"No table logging settings modifications are required for existing WiredTiger tables","attr":{"loggingEnabled":true}}
+{"t":{"$date":"2021-07-07T00:45:02.928+05:30"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+{"t":{"$date":"2021-07-07T00:45:02.935+05:30"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
+{"t":{"$date":"2021-07-07T00:45:02.935+05:30"},"s":"W",  "c":"CONTROL",  "id":22140,   "ctx":"initandlisten","msg":"This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning","tags":["startupWarnings"]}
+{"t":{"$date":"2021-07-07T00:45:02.936+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"admin.system.version","uuidDisposition":"provided","uuid":{"uuid":{"$uuid":"e6c822ab-c883-4977-a122-65c395839d15"}},"options":{"uuid":{"$uuid":"e6c822ab-c883-4977-a122-65c395839d15"}}}}
+{"t":{"$date":"2021-07-07T00:45:02.945+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"admin.system.version","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:45:02.945+05:30"},"s":"I",  "c":"COMMAND",  "id":20459,   "ctx":"initandlisten","msg":"Setting featureCompatibilityVersion","attr":{"newVersion":"4.4"}}
+{"t":{"$date":"2021-07-07T00:45:02.946+05:30"},"s":"I",  "c":"STORAGE",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+{"t":{"$date":"2021-07-07T00:45:02.948+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.startup_log","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"4362d64d-319a-443c-8bea-4739c454e6c4"}},"options":{"capped":true,"size":10485760}}}
+{"t":{"$date":"2021-07-07T00:45:02.957+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"local.startup_log","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:45:03.332+05:30"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"C:/data/db/diagnostic.data"}}
+{"t":{"$date":"2021-07-07T00:45:03.337+05:30"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"LogicalSessionCacheRefresh","msg":"createCollection","attr":{"namespace":"config.system.sessions","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"955206bb-7a2f-42c5-a328-3531aee08daa"}},"options":{}}}
+{"t":{"$date":"2021-07-07T00:45:03.337+05:30"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"NamespaceNotFound: config.system.sessions does not exist"}}
+{"t":{"$date":"2021-07-07T00:45:03.337+05:30"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}
+{"t":{"$date":"2021-07-07T00:45:03.338+05:30"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+{"t":{"$date":"2021-07-07T00:45:03.353+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"config.system.sessions","index":"_id_","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:45:03.353+05:30"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"namespace":"config.system.sessions","index":"lsidTTLIndex","commitTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:45:54.360+05:30"},"s":"I",  "c":"CONTROL",  "id":23372,   "ctx":"thread1","msg":"Ctrl-C signal"}
+{"t":{"$date":"2021-07-07T00:45:54.360+05:30"},"s":"I",  "c":"CONTROL",  "id":23371,   "ctx":"consoleTerminate","msg":"Received event, will terminate after current command ends","attr":{"controlCode":"CTRL_C_EVENT"}}
+{"t":{"$date":"2021-07-07T00:45:54.361+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"consoleTerminate","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2021-07-07T00:45:54.361+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"consoleTerminate","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-07-07T00:45:54.361+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"consoleTerminate","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-07-07T00:45:54.362+05:30"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"consoleTerminate","msg":"Shutting down the LogicalSessionCache"}
+{"t":{"$date":"2021-07-07T00:45:54.363+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"consoleTerminate","msg":"Shutdown: going to close listening sockets"}
+PS C:\Users\harsh> mongod
+{"t":{"$date":"2021-07-07T00:46:00.130+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-07-07T00:46:00.135+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-07-07T00:46:00.135+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-07-07T00:46:00.137+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":10032,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"RedFalcon"}}
+{"t":{"$date":"2021-07-07T00:46:00.138+05:30"},"s":"I",  "c":"CONTROL",  "id":23398,   "ctx":"initandlisten","msg":"Target operating system minimum version","attr":{"targetMinOS":"Windows 7/Windows Server 2008 R2"}}
+{"t":{"$date":"2021-07-07T00:46:00.138+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.6","gitVersion":"72e66213c2c3eab37d9358d5e78ad7f5c1d0d0d7","modules":[],"allocator":"tcmalloc","environment":{"distmod":"windows","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-07-07T00:46:00.138+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Microsoft Windows 10","version":"10.0 (build 19043)"}}}
+{"t":{"$date":"2021-07-07T00:46:00.138+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-07-07T00:46:00.139+05:30"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"C:/data/db/","storageEngine":"wiredTiger"}}
+{"t":{"$date":"2021-07-07T00:46:00.140+05:30"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=15789M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress,compact_progress],"}}
+{"t":{"$date":"2021-07-07T00:46:00.180+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:179598][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 1 through 2"}}
+{"t":{"$date":"2021-07-07T00:46:00.265+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:264619][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 2 through 2"}}
+{"t":{"$date":"2021-07-07T00:46:00.331+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:330599][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Main recovery loop: starting at 1/21376 to 2/256"}}
+{"t":{"$date":"2021-07-07T00:46:00.468+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:467636][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 1 through 2"}}
+{"t":{"$date":"2021-07-07T00:46:00.549+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:548636][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 2 through 2"}}
+{"t":{"$date":"2021-07-07T00:46:00.644+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:643638][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global recovery timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:46:00.644+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:644719][10032:140712047170896], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global oldest timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:46:00.646+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1625598960:645749][10032:140712047170896], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 1, snapshot max: 1 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:46:00.661+05:30"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":520}}
+{"t":{"$date":"2021-07-07T00:46:00.661+05:30"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+{"t":{"$date":"2021-07-07T00:46:00.665+05:30"},"s":"I",  "c":"STORAGE",  "id":4366408, "ctx":"initandlisten","msg":"No table logging settings modifications are required for existing WiredTiger tables","attr":{"loggingEnabled":true}}
+{"t":{"$date":"2021-07-07T00:46:00.669+05:30"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+{"t":{"$date":"2021-07-07T00:46:00.672+05:30"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
+{"t":{"$date":"2021-07-07T00:46:00.673+05:30"},"s":"W",  "c":"CONTROL",  "id":22140,   "ctx":"initandlisten","msg":"This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning","tags":["startupWarnings"]}
+{"t":{"$date":"2021-07-07T00:46:00.677+05:30"},"s":"I",  "c":"STORAGE",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+{"t":{"$date":"2021-07-07T00:46:01.007+05:30"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"C:/data/db/diagnostic.data"}}
+{"t":{"$date":"2021-07-07T00:46:01.013+05:30"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}
+{"t":{"$date":"2021-07-07T00:46:01.013+05:30"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+{"t":{"$date":"2021-07-07T00:47:00.672+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"WTCheckpointThread","msg":"WiredTiger message","attr":{"message":"[1625599020:672145][10032:140712047170896], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 3, snapshot max: 3 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:48:00.695+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"WTCheckpointThread","msg":"WiredTiger message","attr":{"message":"[1625599080:694502][10032:140712047170896], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 5, snapshot max: 5 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)"}}
+{"t":{"$date":"2021-07-07T00:49:00.709+05:30"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"WTCheckpointThread","msg":"WiredTiger message","attr":{"message":"[1625599140:708712][10032:140712047170896], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 6, snapshot max: 6 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0)"}}

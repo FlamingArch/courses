@@ -1,0 +1,20 @@
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.exe
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.deps.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.runtimeconfig.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.runtimeconfig.dev.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\bin\Debug\netcoreapp3.1\Feather UI.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI_MarkupCompile.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI_MarkupCompile.lref
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.g.resources
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.genruntimeconfig.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Feather UI\Feather UI\obj\Debug\netcoreapp3.1\Feather UI.csprojAssemblyReference.cache

@@ -1,0 +1,7 @@
+| Operation                 | Array                                                                   | LinkedList                                                                                     |
+| ------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Access                    | Constant Time [O(1)]                                                    | O(n)                                                                                           |
+| Memory Usage              | Fixed Size, can have unused memory, may need more memory than available | Dynamic Size, Extra Memory needed for Pointer Variable, No unused Memory, Used as small blocks |
+| Insertion at beginning    | O(n)                                                                    | O(1)                                                                                           |
+| Insertion at end          | O(1) if not full, O(n) if full                                          | O(n)                                                                                           |
+| Insertion at position [i] | O(n)                                                                    | O(n)                                                                                           |

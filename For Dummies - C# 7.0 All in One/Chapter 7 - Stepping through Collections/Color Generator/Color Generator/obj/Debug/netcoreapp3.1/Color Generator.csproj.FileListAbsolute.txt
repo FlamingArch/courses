@@ -1,0 +1,19 @@
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.exe
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.deps.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.runtimeconfig.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.runtimeconfig.dev.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\bin\Debug\netcoreapp3.1\Color Generator.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.csprojAssemblyReference.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator_MarkupCompile.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator_MarkupCompile.lref
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.g.resources
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\Color Generator\Color Generator\obj\Debug\netcoreapp3.1\Color Generator.genruntimeconfig.cache

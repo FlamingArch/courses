@@ -1,0 +1,13 @@
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.exe
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.deps.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.runtimeconfig.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.runtimeconfig.dev.json
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\bin\Debug\netcoreapp3.1\LoopThroughFiles.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.csprojAssemblyReference.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.csproj.CoreCompileInputs.cache
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.dll
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.pdb
+C:\Users\harsh\OneDrive\Source\Projects\Study\C# 7.0 All-in-One for Dummies\Chapter 7 - Stepping through Collections\LoopThroughFiles\LoopThroughFiles\obj\Debug\netcoreapp3.1\LoopThroughFiles.genruntimeconfig.cache

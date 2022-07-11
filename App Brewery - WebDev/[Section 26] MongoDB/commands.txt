@@ -1,0 +1,33 @@
+# Show Databases
+show dbs
+
+# Set active Database
+use <#Database Name#>
+# Database is automatically created if it doesn't exists.
+
+# Show Collections
+show collections
+
+# CRUD Operations
+
+# C : Create
+# Add Document to Current Collection
+db.<# Collection Name #>.insertOne({json: "Object"})
+# Collection is automatically created if it doesn't exists.
+
+# R : Read
+db.<# Collection Name #>.find([query], [projection])
+# Read all that has a specific value for a key equal to something
+db.<# Collection Name #>.find({key: value})
+# Read all that has a specific value for a key greater than something
+db.<# Collection Name #>.find({key: {$gt: value}})
+# Read all that has a specific value for a key greater than something with projection (return specific field) alongside query field
+db.<# Collection Name #>.find({key: {$gt: value}}, {field: 1(boolInInt)})
+# Read all that has a specific value for a key greater than something with projection (return specific field) without query field
+db.<# Collection Name #>.find({key: {$gt: value}}, {field: 1(boolInInt), key: 0})
+
+# U : Update
+db.<# Collection Name #>.updateOne(Query, {$set: {key: value}})
+
+# D : Delete
+db.<# Collection Name #>.deleteOne(Query)

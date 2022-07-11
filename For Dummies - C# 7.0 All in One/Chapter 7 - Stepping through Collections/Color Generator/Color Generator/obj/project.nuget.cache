@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MTNRrdIs1Jdn9WwuwVGc0Lz/xdXT9JBKiYz05Kofk4gk1UIPavyKpGkYN47xuGPjBbRIwPXH8WkpyQV1Vd86+g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\harsh\\OneDrive\\Source\\Projects\\Study\\C# 7.0 All-in-One for Dummies\\Chapter 7 - Stepping through Collections\\Color Generator\\Color Generator\\Color Generator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\harsh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

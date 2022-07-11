@@ -1,0 +1,61 @@
+# One to Many Relationship (One document product has many document reviews)
+
+db.products.insert(
+    {
+        _id: 3,
+        name: "Rubber",
+        price: 1.30,
+        stock: 43,
+        reviews: [
+            {
+                authorName: "Sally",
+                rating: 5,
+                review: "Best Rubber Ever!"
+            },
+            {
+                authorName: "John",
+                rating: 5,
+                review: "Awesome Rubber!"
+            }
+        ]
+    }
+)
+db.products.insert(
+    {
+        _id: 2,
+        name: "Rubber",
+        price: 0.80,
+        stock: 12,
+        reviews: [
+            {
+                authorName: "Sally",
+                rating: 5,
+                review: "Best Pencil Ever!"
+            },
+            {
+                authorName: "John",
+                rating: 5,
+                review: "Awesome Pencil!"
+            }
+        ]
+    }
+)
+
+
+# Many to One Relationship (Many documents orders has One document productsOrdered)
+{
+    _id: 1,
+    name: "Pen",
+    price: 1.20,
+    stock: 32
+}
+{
+    _id: 2,
+    name: "Pencil",
+    price: 0.80,
+    stock: 12
+}
+{
+    orderNumber: 3243,
+    productsOrdered: [1, 2]
+}

@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Target ECMAScript Version
+    "watch": true, // Recompile Code on File Change
+    "lib": ["DOM", "ES2017"]  // Include Libraries
+  }
+}

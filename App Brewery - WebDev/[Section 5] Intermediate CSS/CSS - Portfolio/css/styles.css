@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0%;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+}
+h1 {
+  margin: 0;
+  margin-top: 50px auto 0px;
+  line-height: 200%;
+  font-size: 6rem;
+  font-family: "Sacramento", cursive;
+  color: #66BFBF;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif;
+    color: #66BFBF;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #66BFBF;
+}
+.top_container {
+  background-color: #e9f9ff;
+}
+.pro {
+  text-decoration: underline;
+}
+.top-cloud {
+  padding-top: 100px;
+  position: relative;
+  left: 20%;
+}
+.bottom-cloud {
+  position: absolute;
+  left: 20%;
+}
+.skill-row {
+  width: 50%;
+  align-self: center;
+  margin: 100px auto;
+  line-height: 2;
+  text-align: left;
+}
+
+.chillies-img {
+  width: 30%;
+  float: right;
+  margin-right: 30px;
+}
+
+.code-img {
+  width: 30%;
+  float: left;
+  margin-right: 30px;
+  clip-path: circle();
+}
+.profile{ 
+  width: 30%;
+  margin: 100px auto;
+  line-height: 2;
+}
+
+hr {
+  width: 5%;
+  border: 0px;
+  border-top: 5px;
+  border-color: #EAF6F6;
+
+  border-style:dotted;
+}
+
+.contact-me p {
+  padding-bottom: 25px;
+  line-height: 2;
+}
+.contact-me {
+  width: 50%;
+  line-height: 2;
+  margin: 100px auto;
+}
+
+.btn {
+  background: linear-gradient( #66BFBF, hsl(180, 60%, 35%));
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  /* 66BFBF */
+}
+
+.bottom-container {
+  width: 100vw;
+  padding: 50px 0px;
+  background: #66BFBF;
+  color: white;
+}
+
+.bottom-container a {
+  margin: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 120%;
+  text-decoration: none;
+  color: #11999E;
+}
+
+.bottom-container p {
+  margin-top: 50px;
+  columns: #EAF6F6;
+}

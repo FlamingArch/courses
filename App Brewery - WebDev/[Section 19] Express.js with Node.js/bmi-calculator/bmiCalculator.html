@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--#region Materialize CSS-->
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- #endregion -->
+    <!-- #region Styling-->
+    <style>
+      /* label focus color */
+      .input-field input[type="text"]:focus + label {
+        color: #3f51b5 !important;
+      }
+      /* label underline focus color */
+      .input-field input[type="text"]:focus {
+        border-bottom: 1px solid #3f51b5 !important;
+        box-shadow: 0 1px 0 0 #3f51b5 !important;
+      }
+      /* icon prefix focus color */
+      .input-field .prefix.active {
+        color: #3f51b5 !important;
+      }
+    </style>
+    <!-- #endregion -->
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper indigo">
+        <a href="#" class="brand-logo left white-text">BMI Calculator</a>
+      </div>
+    </nav>
+    <form action="/" method="POST">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <span class="material-icons prefix"> monitor_weight </span>
+              <input type="text" name="height" id="height" />
+              <label for="height">Enter Height</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <span class="material-icons prefix"> height </span>
+              <input type="text" name="weight" id="weight" />
+              <label for="weight">Enter Weight</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button
+                class="btn waves-effect waves-light indigo"
+                type="submit"
+                name="submit"
+              >
+                Calculate BMI
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Addition Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin-bottom: 1rem !important;
+      }
+      body {
+        padding: 1rem !important;
+      }
+      .no-pad {
+        margin-bottom: 0px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form action="/" method="post">
+      <input
+        class="form-control"
+        type="text"
+        name="num1"
+        placeholder="First Number"
+      />
+      <input
+        class="form-control"
+        type="text"
+        name="num2"
+        placeholder="Second Number"
+      />
+      <button class="btn btn-primary btn-lg" type="submit" name="submit">
+        <i class="fa fa-calculator no-pad" aria-hidden="true"> </i> Calculate
+      </button>
+    </form>
+  </body>
+</html>

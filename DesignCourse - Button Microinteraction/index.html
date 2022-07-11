@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Button Micro Interaction</title>
+  </head>
+  <body>
+    <div class="container">
+      <button>
+        <span class="label">Confim</span>
+        <span class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="44.419"
+            height="36.507"
+            viewBox="0 0 44.419 36.507"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #fff;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <path
+              class="a"
+              d="M130.682,218.058l14.586,17.462,28.295-34.305"
+              transform="translate(-129.915 -200.579)"
+            />
+          </svg>
+        </span>
+      </button>
+      <p>Next</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(CSSRulePlugin);
+
+      const tl = gsap.timeline({
+        defaults: { ease: Power2.easeOut },
+      });
+      btn = document.querySelector("button");
+      rule = CSSRulePlugin.getRule("button::before");
+      tl.to(".label", {
+        opacity: 0,
+        height: 0,
+        position: "absolute",
+        duration: ".2s",
+      })
+        .to(
+          "button",
+          {
+            borderRadius: "50%",
+            width: "2.5em",
+            height: "2.5em",
+            ease: Elastic.easeOut.config(0.7, 0.3),
+            duration: 1.2
+          },
+          "-=.5s"
+        )
+        .to(rule, { borderRadius: "50%" }, "-=1s")
+        .to("svg", { strokeDasharray: "90 103" }, "-=.1")
+        .to(
+          "path",
+          { attr: { d: "M-2.27373675e-13,35 L16,17.5 L-2.27373675e-13,0" } },
+          "+=1"
+        )
+        .to(p, { clippath: "circle(100% at 50% 50%)" }, "-=1.4");
+      tl.pause();
+      btn.addEventListener("click", () => {
+        tl.play();
+      });
+    </script>
+  </body>
+</html>
+
+<!-- M-2.27373675e-13,35 L16,17.5 L-2.27373675e-13,0 -->
