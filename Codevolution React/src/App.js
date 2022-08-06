@@ -1,4 +1,8 @@
 import "./App.css";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+// import Hero from "./components/Hero";
+// import FRInput from "./components/FRInput";
 // import RefsDemo from "./components/RefsDemo";
 // import ParentComp from "./components/ParentComp";
 // import FragmentDemo from "./components/FragmentDemo";
@@ -19,6 +23,7 @@ import "./App.css";
 // import Form from "./components/Form";
 // import Table from "./components/Table";
 // import PureComp from "./components/PureComp";
+// import PortalDemo from "./components/PortalDemo";
 
 // import "./appStyles.css";
 // import styles from "./appStyles.module.css";
@@ -59,6 +64,13 @@ function App() {
       {/* <PureComp /> */}
       {/* <ParentComp /> */}
       {/* <RefsDemo /> */}
+      {/* <FRInput /> */}
+      {/* <PortalDemo /> */}
+      {/* <Hero heroName="Batman" />
+      <Hero heroName="Superman" />
+      <Hero heroName="Joker" /> */}
+      <ClickCounter name="Vishwas" />
+      <HoverCounter />
     </div>
   );
 }
@@ -111,4 +123,15 @@ getSnapshotBeforeUpdate(prevProps, prevState)
 componentDidUpdate(prevProps, prevState, snapshot)
 - Called after the render is finished.
 - Cause side effects.
+*/
+
+/*
+static getDerivedStateFromError(error)
+- Called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+- Used to render a fallback UI after an error has been thrown.
+- Method will either return an object to update state or return null to update nothing.
+
+componentDidCatch(error, info)
+- Called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+- Used to log error information.
 */
