@@ -1,6 +1,14 @@
 import "./App.css";
-import ClickCounter from "./components/ClickCounter";
-import HoverCounter from "./components/HoverCounter";
+import PostForm from "./components/PostForm";
+import PostList from "./components/PostList";
+// import ComponentC from "./components/ComponentC";
+// import { UserProvider } from "./components/userContext";
+// import Counter from "./components/CounterTwo";
+// import ClickCounterTwo from "./components/ClickCounterTwo";
+// import HoverCounterTwo from "./components/HoverCounterTwo";
+// import User from "./components/User";
+// import ClickCounter from "./components/ClickCounter";
+// import HoverCounter from "./components/HoverCounter";
 // import Hero from "./components/Hero";
 // import FRInput from "./components/FRInput";
 // import RefsDemo from "./components/RefsDemo";
@@ -69,8 +77,35 @@ function App() {
       {/* <Hero heroName="Batman" />
       <Hero heroName="Superman" />
       <Hero heroName="Joker" /> */}
-      <ClickCounter name="Vishwas" />
-      <HoverCounter />
+      {/* <ClickCounter name="Vishwas" />
+      <HoverCounter /> */}
+      {/* <ClickCounterTwo />
+      <HoverCounterTwo />
+      <User render={(isLoggedIn) => (isLoggedIn ? "Vishwas" : "Guest")} /> */}
+      {/* <Counter
+        render={(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+      <Counter
+        render={(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )} */}
+      {/* <Counter
+        render={(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+      <Counter
+        render={(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      /> */}
+      {/* <UserProvider value="Vishwas">
+        <ComponentC />
+      </UserProvider> */}
+      {/* <PostList /> */}
+      <PostForm />
     </div>
   );
 }
