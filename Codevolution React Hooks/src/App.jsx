@@ -1,18 +1,18 @@
 import "./App.css";
-import HookCounterFour from "./Components/HookCounterFour";
-// import ClassCounter from "./Components/ClassCounter";
-// import HookCounter from "./Components/HookCounter";
-// import HookCounterTwo from "./Components/HookCounterTwo";
-import HookCounterThree from "./Components/HookCounterThree";
+// import ClassCounter from "./components/ClassCounter";
+// import HookCounter from "./components/HookCounter";
+// import HookCounterTwo from "./components/HookCounterTwo";
+// import HookCounterThree from "./components/HookCounterThree";
+import HooksCounterFour from "./components/HooksCounterFour";
 
 function App() {
   return (
     <div className="App">
       {/* <ClassCounter /> */}
       {/* <HookCounter /> */}
-      {/* <HookCounterTwo /> */}
+      {/* <HookCounterTwo/> */}
       {/* <HookCounterThree /> */}
-      <HookCounterFour />
+      <HooksCounterFour />
     </div>
   );
 }
