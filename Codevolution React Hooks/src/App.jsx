@@ -3,7 +3,12 @@ import "./App.css";
 // import HookCounter from "./components/HookCounter";
 // import HookCounterTwo from "./components/HookCounterTwo";
 // import HookCounterThree from "./components/HookCounterThree";
-import HooksCounterFour from "./components/HooksCounterFour";
+// import HooksCounterFour from "./components/HooksCounterFour";
+import ClassCounterOne from "./components/ClassCounterOne";
+import ClassMouse from "./components/ClassMouse";
+import HookCounterOne from "./components/HookCounterOne";
+import HookMouse from "./components/HookMouse";
+import MouseContainer from "./components/MouseContainer";
 
 function App() {
   return (
@@ -12,7 +17,12 @@ function App() {
       {/* <HookCounter /> */}
       {/* <HookCounterTwo/> */}
       {/* <HookCounterThree /> */}
-      <HooksCounterFour />
+      {/* <HooksCounterFour /> */}
+      {/* <ClassCounterOne /> */}
+      {/* <HookCounterOne /> */}
+      {/* <ClassMouse /> */}
+      {/* <HookMouse /> */}
+      <MouseContainer />
     </div>
   );
 }
