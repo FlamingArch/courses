@@ -94,3 +94,10 @@ Holds all public resources of the project, such as the favicon. Different from r
 ### `pages`
 
 Responsible for the entire routing feature of the project, it contains `index.js`, which is the file that is served when we visit the home page of the site (on, say, `localhost:3000`). It also contains `_app.js` for defining the layout of the project, and an `api` folder for better organisation of API routes.
+
+### Routing Special File/Folder Names
+
+- `[var]`: Dynamic Route
+- `[...params]`: Catch all route, excluding base page.
+- `[[...params]]`: Catch all route, including base page.
+
