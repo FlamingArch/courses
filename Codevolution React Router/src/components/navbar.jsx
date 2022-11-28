@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav>
+    <nav className="primary-nav">
       {/* <Link to="/">Home</Link>
       <Link to="/about">About</Link> */}
       <NavLink style={navLinkStyles} to="/">
@@ -17,6 +17,9 @@ export default function Navbar() {
       </NavLink>
       <NavLink style={navLinkStyles} to="/about">
         About
+      </NavLink>
+      <NavLink style={navLinkStyles} to="/products">
+        Products
       </NavLink>
     </nav>
   );

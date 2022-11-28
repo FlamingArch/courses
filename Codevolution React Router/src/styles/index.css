@@ -20,7 +20,6 @@ a {
   color: #646cff;
   text-decoration: inherit;
   opacity: 0.4;
-
 }
 /* a.active {
   font-weight: 500;
@@ -76,10 +75,11 @@ button:focus-visible {
   }
 }
 
-nav {
+.primary-nav {
   padding: 1rem;
   display: flex;
   width: 100vw;
   gap: 1rem;
   background: #646cff22;
 }
+
