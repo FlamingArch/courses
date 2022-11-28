@@ -78,8 +78,13 @@ button:focus-visible {
 .primary-nav {
   padding: 1rem;
   display: flex;
+  place-items: center;
   width: 100vw;
+  max-width: 100vw;
   gap: 1rem;
   background: #646cff22;
 }
 
+.spacer {
+  flex-grow: 1;
+}
