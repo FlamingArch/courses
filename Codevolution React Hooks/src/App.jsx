@@ -18,6 +18,7 @@ import ComponentA from "./Components/ComponentA";
 // import ComponentC from "./Components/ComponentC";
 import ComponentD from "./Components/ComponentD";
 import ComponentF from "./Components/ComponentF";
+import DataFetchingTwo from "./Components/DataFetchingTwo";
 
 export const CountContext = React.createContext();
 
@@ -44,7 +45,7 @@ function App() {
       value={{ countState: count, countDispatch: dispatch }}
     >
       <div className="App">
-        <div className="">Count - {count}</div>
+        {/* <div className="">Count - {count}</div> */}
         {/* <ClassCounter /> */}
         {/* <HookCounter /> */}
         {/* <HookCounterTwo/> */}
@@ -56,11 +57,12 @@ function App() {
         {/* <HookMouse /> */}
         {/* <MouseContainer /> */}
         {/* <CounterThree /> */}
-        <ComponentA />
+        {/* <ComponentA /> */}
         {/* <ComponentB />
         <ComponentC /> */}
-        <ComponentD />
-        <ComponentF />
+        {/* <ComponentD /> */}
+        {/* <ComponentF /> */}
+        <DataFetchingTwo />
       </div>
     </CountContext.Provider>
   );
