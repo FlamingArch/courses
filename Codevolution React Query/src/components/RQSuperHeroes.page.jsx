@@ -54,13 +54,17 @@ export const RQSuperHeroesPage = () => {
   }
 
   return (
-    <>
+    <div
+      style={{
+        padding: "0px 1rem",
+      }}
+    >
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
-          padding: "0px 1rem",
           alignItems: "center",
+          margin: 0,
         }}
       >
         <h2>Super Heroes Page</h2>
@@ -84,7 +88,7 @@ export const RQSuperHeroesPage = () => {
       {/* {data.map((heroName) => {
         return <div key={heroName}>{heroName}</div>;
       })} */}
-    </>
+    </div>
   );
 };
 

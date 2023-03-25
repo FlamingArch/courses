@@ -29,11 +29,11 @@ export const SuperheroesPage = () => {
   }
 
   return (
-    <>
+    <div style={{ padding: "0rem 1rem" }}>
       <h2>Super Heroes Page</h2>
       {data.map((hero) => {
         return <div key={hero.name}>{hero.name}</div>;
       })}
-    </>
+    </div>
   );
 };
