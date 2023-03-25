@@ -14,6 +14,56 @@
       "id": 3,
       "name": "Wonder Women",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 4
+    },
+    {
+      "name": "Nigward",
+      "alterEgo": "Nigger Squidward",
+      "id": 5
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Billy Batson",
+      "id": 6
+    },
+    {
+      "name": "Green Arrow",
+      "alterEgo": "Oliver Queen",
+      "id": 7
+    },
+    {
+      "name": "Catwoman",
+      "alterEgo": "Selina Kyle",
+      "id": 8
+    },
+    {
+      "name": "Iron Man",
+      "alterEgo": "Tony Stark",
+      "id": 9
+    },
+    {
+      "name": "Thor",
+      "alterEgo": "Thor",
+      "id": 10
+    },
+    {
+      "name": "Aquaman",
+      "alterEgo": "Arthur Curry",
+      "id": 11
+    },
+    {
+      "name": "Aquaman 2",
+      "alterEgo": "Same",
+      "id": 12
+    },
+    {
+      "name": "Qwerty",
+      "alterEgo": "Yuiop",
+      "id": 13
     }
   ],
   "friends": [
@@ -51,7 +101,11 @@
   "channels": [
     {
       "id": "codevolution",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [

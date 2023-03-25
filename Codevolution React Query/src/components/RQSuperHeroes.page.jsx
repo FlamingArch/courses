@@ -1,13 +1,28 @@
 // import { useQuery } from "@tanstack/react-query";
 // import axios from "axios";
-import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
+import {
+  useAddSuperHeroData,
+  useSuperHeroesData,
+} from "../hooks/useSuperHeroesData";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCancel,
+  faClose,
+  faPlus,
+  faRefresh,
+} from "@fortawesome/free-solid-svg-icons";
 
 // const fetchSuperHeroes = () => {
 //   return axios.get("http://localhost:4000/superheroes");
 // };
 
 export const RQSuperHeroesPage = () => {
+  const [name, setName] = useState("");
+  const [alterEgo, setAlterEgo] = useState("");
+  const [dialogVisible, setDialogVisible] = useState(false);
+
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
   };
@@ -37,6 +52,17 @@ export const RQSuperHeroesPage = () => {
   // );
   const { data, isLoading, isError, error, isFetching, refetch } =
     useSuperHeroesData(onSuccess, onError);
+
+  const { mutate: addHero } = useAddSuperHeroData();
+
+  const handleAddSuperHeroClick = () => {
+    console.log({ name, alterEgo });
+    const hero = { name, alterEgo };
+    addHero(hero);
+    setDialogVisible(false);
+    setName("");
+    setAlterEgo("");
+  };
 
   console.log({ isLoading, isFetching });
 
@@ -68,13 +94,61 @@ export const RQSuperHeroesPage = () => {
         }}
       >
         <h2>Super Heroes Page</h2>
-        <button onClick={refetch}>Fetch Heroes</button>
+        <div style={{ display: "flex" }}>
+          <button onClick={refetch}>
+            <FontAwesomeIcon icon={faRefresh} />
+            <div className="hidden-mobile">Fetch Heroes</div>
+          </button>
+          <button
+            onClick={() => {
+              setDialogVisible(true);
+            }}
+            style={{ background: "#646cff", marginLeft: "1rem" }}
+          >
+            <FontAwesomeIcon icon={faPlus} />{" "}
+            <span className="hidden-mobile">New Hero</span>
+          </button>
+        </div>
       </div>
+      {dialogVisible && (
+        <div className="dialog">
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button
+              style={{ color: "red", background: "transparent" }}
+              onClick={() => setDialogVisible(false)}
+            >
+              <FontAwesomeIcon icon={faClose} />
+            </button>
+            <button
+              onClick={handleAddSuperHeroClick}
+              style={{ color: "#646cff", background: "transparent" }}
+            >
+              <FontAwesomeIcon icon={faPlus} /> Add Hero
+            </button>
+          </div>
+          <h2>Add New Hero</h2>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Alter Ego"
+            value={alterEgo}
+            onChange={(e) => {
+              setAlterEgo(e.target.value);
+            }}
+          />
+        </div>
+      )}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          padding: "0px 1rem",
         }}
       >
         {data?.data.map((hero) => {
