@@ -13,12 +13,19 @@ import React from "react";
 // import CounterOne from "./Components/CounterOne";
 // import CounterTwo from "./Components/CounterTwo";
 // import CounterThree from "./Components/CounterThree";
-import ComponentA from "./Components/ComponentA";
+// import ComponentA from "./components/ComponentA";
 // import ComponentB from "./Components/ComponentB";
 // import ComponentC from "./Components/ComponentC";
-import ComponentD from "./Components/ComponentD";
-import ComponentF from "./Components/ComponentF";
-import DataFetchingTwo from "./Components/DataFetchingTwo";
+// import ComponentD from "./components/ComponentD";
+// import ComponentF from "./components/ComponentF";
+// import DataFetchingTwo from "./components/DataFetchingTwo";
+// import ParentComponent from "./components/ParentComponent";
+// import Counter from "./components/Counter";
+// import FocusInput from "./components/FocusInput";
+// import ClassTimer from "./components/ClassTimer";
+// import HookTimer from "./components/HookTimer";
+import DocTitleOne from "./components/DocTitleOne";
+import DocTitleTwo from "./components/DocTitleTwo";
 
 export const CountContext = React.createContext();
 
@@ -62,10 +69,18 @@ function App() {
         <ComponentC /> */}
         {/* <ComponentD /> */}
         {/* <ComponentF /> */}
-        <DataFetchingTwo />
+        {/* <DataFetchingTwo /> */}
+        {/* <ParentComponent /> */}
+        {/* <Counter /> */}
+        {/* <FocusInput /> */}
+        {/* <ClassTimer />
+        <HookTimer /> */}
+        <DocTitleOne />
+        <DocTitleTwo />
       </div>
     </CountContext.Provider>
   );
 }
 
 export default App;
+// useState useReducer useEffect useRef useCallback useMemo
