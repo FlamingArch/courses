@@ -15,6 +15,16 @@ import { ThemeContextProvider } from "./Components/context/ThemeContext";
 import { Box } from "./Components/context/Box";
 import { UserContextProvider } from "./Components/context/UserContext";
 import { User } from "./Components/context/User";
+import { DomRef } from "./Components/ref/DomRef";
+import { MutableRef } from "./Components/ref/MutableRef";
+import CounterClass from "./Components/class/Counter";
+import { Private } from "./Components/auth/private";
+import Profile from "./Components/auth/profile";
+import { List } from "./Components/generics/List";
+import { RandomNumber } from "./Components/restriction/RandomNumber";
+import { Toast } from "./Components/templateliterals/Toast";
+import { CustomButton } from "./Components/html/Button";
+import { Text } from "./Components/polymorphic/Text";
 
 function App() {
   const personName = {
@@ -59,6 +69,50 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <DomRef />
+      <MutableRef />
+      <CounterClass message="The current count is: " />
+      <Private isLoggedIn component={Profile} />
+      {/* <List
+        items={["Batman", "Superman", "Wonder Women"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List
+        items={[
+          {
+            id: 1,
+            first: "Bruce",
+            last: "Wayne",
+          },
+          {
+            id: 2,
+            first: "Clark",
+            last: "Kent",
+          },
+          {
+            id: 3,
+            first: "Princess",
+            last: "Diana",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
+      <RandomNumber value={10} isPositive />
+      <Toast position="center" />
+      <CustomButton variant="primary" onClick={() => console.log("Clicked")}>
+        {/* <div>Primary Button</div> */}
+        Primary Button
+      </CustomButton>
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="someId" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
