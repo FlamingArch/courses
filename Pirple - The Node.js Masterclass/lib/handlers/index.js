@@ -3,15 +3,15 @@
  *
  */
 
-const _data = require("./data");
-const helpers = require("./helpers");
+const _data = require("../data");
+const helpers = require("../helpers");
 
 // Define the handlers
 var handlers = {};
 
-handlers.sample = require("./handlers/sample");
-handlers.ping = require("./handlers/ping");
-handlers.notFound = require("./handlers/notFound");
+handlers.sample = require("./sample");
+handlers.ping = require("./ping");
+handlers.notFound = require("./notFound");
 
 // Required data: firstName, lastName, phone, password, tosAgreement
 // Optional data: none
