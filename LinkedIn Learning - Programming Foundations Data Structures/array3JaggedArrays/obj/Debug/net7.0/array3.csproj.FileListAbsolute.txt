@@ -1,0 +1,5 @@
+/Users/flamingarch/Developer/courses/LinkedIn Learning - Programming Foundations Data Structures/array3/obj/Debug/net7.0/array3.csproj.AssemblyReference.cache
+/Users/flamingarch/Developer/courses/LinkedIn Learning - Programming Foundations Data Structures/array3/obj/Debug/net7.0/array3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/flamingarch/Developer/courses/LinkedIn Learning - Programming Foundations Data Structures/array3/obj/Debug/net7.0/array3.AssemblyInfoInputs.cache
+/Users/flamingarch/Developer/courses/LinkedIn Learning - Programming Foundations Data Structures/array3/obj/Debug/net7.0/array3.AssemblyInfo.cs
+/Users/flamingarch/Developer/courses/LinkedIn Learning - Programming Foundations Data Structures/array3/obj/Debug/net7.0/array3.csproj.CoreCompileInputs.cache

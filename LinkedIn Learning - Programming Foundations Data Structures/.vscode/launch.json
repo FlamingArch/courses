@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "StackError",
+      "request": "launch",
+      "mainClass": "StackError",
+      "projectName": "LinkedIn Learning - Programming Foundations Data Structures_74de6161"
+    },
+    {
+      "type": "java",
+      "name": "LinkedListLibrary",
+      "request": "launch",
+      "mainClass": "LinkedListLibrary",
+      "projectName": "LinkedIn Learning - Programming Foundations Data Structures_74de6161"
+    },
+    {
+      "type": "java",
+      "name": "LinkedListImplementation",
+      "request": "launch",
+      "mainClass": "LinkedListImplementation",
+      "projectName": "LinkedIn Learning - Programming Foundations Data Structures_74de6161"
+    },
+    {
+      "type": "java",
+      "name": "array5IndexOf",
+      "request": "launch",
+      "mainClass": "array5IndexOf",
+      "projectName": "LinkedIn Learning - Programming Foundations Data Structures_74de6161"
+    },
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/array3JaggedArrays/bin/Debug/net7.0/array3.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/array3JaggedArrays",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    }
+  ]
+}
