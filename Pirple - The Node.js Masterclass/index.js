@@ -7,16 +7,16 @@
 const http = require("http");
 const https = require("https");
 const fs = require("fs");
-const { StringDecoder } = require("string_decoder");
 const unifiedServer = require("./lib/server");
 const config = require("./lib/config");
 
 const httpServer = http.createServer(unifiedServer);
 
-httpServer.listen(config.port, function () {
-  console.log(
-    `The server is listening on port ${config.httpPort} in ${config.envName} now`
-  );
+const status = (port, name) =>
+  `:: The server is listening on port ${port} in ${name} now`;
+
+httpServer.listen(config.httpPort, function () {
+  console.log(status(config.httpPort, config.envName));
 });
 
 const httpsServerOptions = {
@@ -26,8 +26,6 @@ const httpsServerOptions = {
 
 var httpsServer = https.createServer(httpsServerOptions, unifiedServer);
 
-httpsServer.listen(config.port, () =>
-  console.log(
-    `The secure server is listening on port ${config.httpsPort} in ${config.envName} now`
-  )
+httpsServer.listen(config.httpsPort, () =>
+  console.log(status(config.httpsPort, config.envName))
 );

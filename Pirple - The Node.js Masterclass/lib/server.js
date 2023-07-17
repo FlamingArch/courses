@@ -1,17 +1,21 @@
 const url = require("url");
+const { StringDecoder } = require("string_decoder");
 const handlers = require("./handlers");
 const helpers = require("./helpers");
 const router = require("./router");
 
 const unifiedServer = function (req, res) {
-  var parsedUrl = url.parse(req.url, true); // Setting it true allows it to call querystring module
+  // Parse URL on request
+  // Setting it true allows it to call querystring module
+  var parsedUrl = url.parse(req.url, true);
+
   var path = parsedUrl.pathname;
-  var trimmedPath = path.replace(/^\/+|\/+$/g, ""); // Regex to trim starting and ending slashes
+  var trimmedPath = path.replace(/^\/+|\/+$/g, ""); // Regex: trim start and end slashes
   var queryStringObject = parsedUrl.query;
   var method = req.method.toLowerCase();
   var headers = req.headers;
 
-  // Get the payload, if there is any
+  // Get the payload, if any
   var decoder = new StringDecoder("utf-8");
   var buffer = "";
   req.on("data", (data) => {
@@ -19,7 +23,7 @@ const unifiedServer = function (req, res) {
   });
 
   // On request end, end the decoder.
-  // End will always be called, so if there is no payload,
+  // End will always be called, so if no payload,
   // buffer will remain as an empty string.
   req.on("end", () => {
     buffer += decoder.end();
@@ -40,36 +44,32 @@ const unifiedServer = function (req, res) {
     };
 
     chosenHandler(data, function (statusCode, payload) {
-      // Use the status code called back by the handler, or default to 200
       statusCode = typeof statusCode == "number" ? statusCode : 200;
-
-      // Use the payload defined by the handler, or default to 200
       payload = typeof [payload] == "object" ? payload : {};
+
       var payloadString = JSON.stringify(payload);
 
-      // Return the response
       res.setHeader("Content-Type", "application/json");
       res.writeHead(statusCode);
       res.end(payloadString);
-      console.log("Responding with this status code: ", statusCode);
-      console.log("Responding with this payload: ", payloadString);
+
+      console.log(`:: Responded with:
+   - status code: ${statusCode}
+   - payload: ${payloadString}\n`);
     });
 
     // Send the response
     // res.end("Hello, World!\n");
 
-    // Log the request path
-    console.log("Request received with this payload: ", buffer);
+    console.log(`:: Request received with this payload: ${buffer}\n`);
   });
 
-  // Send the response
-  // res.end("Hello, World!\n");
-
-  // Log the request path
   console.log(
-    `Request received on path: ${trimmedPath} with method: ${method} and with these query string parameters ${JSON.stringify(
-      queryStringObject
-    )} and these headers: ${JSON.stringify(headers)}`
+    `:: Request received on
+   - path: ${trimmedPath}
+   - method: ${method}
+   - query string parameters: ${JSON.stringify(queryStringObject)}
+   - headers: ${JSON.stringify(headers, {}, 2)}\n`
   );
 };
 
