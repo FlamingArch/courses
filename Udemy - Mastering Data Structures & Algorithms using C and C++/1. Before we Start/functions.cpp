@@ -1,5 +1,11 @@
 #include <iostream>
 
+typedef struct Rectangle
+{
+  int length;
+  int breadth;
+} Rectangle;
+
 void func1();
 void func2();
 void func3();
@@ -7,6 +13,9 @@ void func3();
 int add(int, int);
 void swap(int &a, int &b);
 int fun(int a[], int n);
+
+int area(Rectangle);
+void incrementLength(Rectangle &);
 
 int main()
 {
@@ -84,4 +93,14 @@ int fun(int a[], int n)
   printf("\n");
 
   return *a;
+}
+
+int area(Rectangle r)
+{
+  return r.length * r.breadth;
+}
+
+void incrementLength(Rectangle &r)
+{
+  r.length++;
 }
