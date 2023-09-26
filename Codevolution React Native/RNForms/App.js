@@ -5,10 +5,13 @@ import {
   Text,
   SafeAreaView,
   TextInput,
+  Switch,
+  View,
 } from "react-native";
 
 export default function App() {
   const [name, setName] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -28,6 +31,15 @@ export default function App() {
         placeholder="Password"
         multiline
       />
+      <View style={styles.switchContainer}>
+        <Text style={styles.text}>Dark Mode</Text>
+        <Switch
+          value={isDarkMode}
+          onValueChange={() => setIsDarkMode((prev) => !prev)}
+          trackColor={{ false: "#767577", true: "lightblue" }}
+          thumbColor="#f4f3f4"
+        />
+      </View>
     </SafeAreaView>
   );
 }
@@ -53,5 +65,11 @@ const styles = StyleSheet.create({
   multilineText: {
     minHeight: 100,
     textAlignVertical: "top", // For Android, as multiline text is not vertically aligned by default, and instead starts from the centre
+  },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
   },
 });
