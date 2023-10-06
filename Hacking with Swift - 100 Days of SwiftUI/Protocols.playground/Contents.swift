@@ -1,6 +1,6 @@
 import Foundation
 
-// PROTOCOLS
+// MARK: PROTOCOLS
 protocol Vehicle {
     var name: String { get }
     var currentPassangers: Int { get set } // Can't be a let constant
@@ -93,14 +93,144 @@ commute(distance: 100, using: train)
 
 getTravelEstimates(using: [car, train], distance: 500)
 
-// OPAQUE RETURN TYPES
-func getRandomNumber() -> Equatable {
+// MARK: OPAQUE RETURN TYPES
+func getRandomNumber() -> some Equatable {
     Int.random(in: 1...6)
 }
 
-func getRandomBool() -> Equatable {
+func getRandomBool() -> some Equatable {
     Bool.random()
 }
 
 // Int (and Bool) conforms to an Equatable protocol, which allows comparation of values using '==' operator
 print(getRandomNumber() == getRandomNumber())
+
+// Exact return type is hidden, but the compiler knows internally what is actually returned, allowing us to change return type later in the code.
+// Uses protocols to hide exact type but provide an expectation for supporting a particular operation.
+// Eg.: Equatable allows making sure the return type supports comparasion operations, without disclosing the exact return type.
+// We can change the Int to Double in getRandomNumber(), and the function will still be valid, as Double implements equatable.
+// We don't have to worry about the change afterwards. Even though we don't get all the features of double (eg.: methods)
+
+// MARK: Extensions
+
+var quote = "   The truth is rarely pure and never simple.   "
+let trimmed = quote.trimmingCharacters(in: .whitespacesAndNewlines) // Y so long lol
+print(trimmed)
+
+extension String {
+    var lines: [String] {
+        self.components(separatedBy: .newlines)
+    } // Return all lines seperated by line breaks in an array of String
+    
+    func trimmed() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    mutating func trim() {
+        self = self.trimmed()
+    } // In-place trimming
+}
+
+let newTrimmed = quote.trimmed() // Much better
+print(newTrimmed)
+
+var motive = """
+Saving People
+Hunting Things
+The Family Business
+"""
+
+print(motive.lines)
+
+struct Book {
+    let title: String
+    let pageCount: Int
+    let readingHours: Int
+}
+
+let lotr = Book(title: "Lord of the Rings", pageCount: 1178, readingHours: 24)
+
+extension Book {
+    init(title: String, pageCount: Int) {
+        self.title = title
+        self.pageCount = pageCount
+        self.readingHours = pageCount / 50
+    }
+} // Won't disable automatic memberwise-initializer
+
+let harryPotter = Book(title: "Harry Potter", pageCount: 1000)
+print(harryPotter.readingHours)
+
+// MARK: Protocol Extensions
+let guests = ["Mario", "Luigi", "Peach"]
+
+if guests.isEmpty == false {
+    print("Guest count: \(guests.count)")
+}
+
+extension Collection {
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+} // Using Collection instead of Array, we can use the same property also in Dictionaries etc.
+
+if guests.isNotEmpty {
+    print("Guest count: \(guests.count)")
+}
+
+protocol Person {
+    var name: String {get}
+    func sayHello()
+}
+
+extension Person {
+    func sayHello() {
+        print("Hi!, I'm \(name)")
+    }
+}
+
+struct Employee: Person {
+    let name: String
+}
+
+let taylor = Employee(name: "Taylor Swift")
+taylor.sayHello()
+
+//extension Int {
+extension Numeric {
+    func squared()-> Self {
+        self * self
+    }
+}
+
+let wholeNumber = 5
+print(wholeNumber.squared())
+
+// Comparable inherits Equatable, so you don't need to add both
+//struct User: Equatable, Comparable {
+struct User: Comparable {
+    let name: String
+    
+    static func <(lhs: User, rhs: User) -> Bool {
+        lhs.name < rhs.name
+    }
+    
+}
+
+let user1 = User(name: "Link")
+let user2 = User(name: "Zelda")
+
+print(user1 == user2)
+print(user1 != user2)
+// It compares every proptery to check if 2 users are equal in case of Equatable
+
+//func <(lhs: User, rhs: User) -> Bool {
+//   lhs.name < rhs.name
+//} // For Comparable Conformance, but its better to have it inside the struct instead of global scope.
+print(user1 < user2)
+print(user1 <= user2)
+print(user1 > user2)
+print(user1 >= user2)
+
+
+
