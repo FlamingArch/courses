@@ -42,7 +42,7 @@ export default function prims(list: WeightedAdjacencyList): WeightedAdjacencyLis
         // 4. we need to insert the edge from current to new into our mst, set visited, and remove the potential edge
         if (lowestEdge[1] !== null) {
             mst[lowestEdge[0]].push(lowestEdge[1]);
-            mst[lowestEdge[1].to].push({to: lowestEdge[0], weight: lowestEdge[1].weight});
+            mst[lowestEdge[1].to].push({ to: lowestEdge[0], weight: lowestEdge[1].weight });
             visited[lowestEdge[1].to] = true;
             edges.splice(edges.indexOf(lowestEdge as [number, GraphEdge]), 1);
         }
@@ -89,4 +89,3 @@ if (require.main === module) {
         ],
     ]);
 }
-
