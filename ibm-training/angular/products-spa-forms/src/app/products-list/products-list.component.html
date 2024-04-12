@@ -1,0 +1,71 @@
+<div class='card'>
+    <div class='card-header'>
+    {{title}}
+    </div>
+    <div class='card-body'>
+    <div class='row'>
+    <div class='col-md-2'>Filter by:</div>
+    <div class='col-md-4'>
+    <input type='text' [(ngModel)]="searchKey"/>
+    </div>
+    
+    </div>
+    <div class='row'>
+    <div class='col-md-6'>
+    <h4>Filtered by: </h4>
+    </div>
+    </div>
+    <div class='table-responsive'>
+    <table class='table'>
+    <thead>
+    <tr>
+    <th>
+    <!-- @if(showImage){
+    <button class='btn btn-primary' (click)="showOrHide()" >
+    Hide Image
+    </button>
+    }
+    @else{
+    <button class='btn btn-primary' (click)="showOrHide()" >
+        Show Image
+        </button>
+    } -->
+        <button class='btn btn-primary' (click)="showOrHide()" >
+            {{showImage? 'Hide': 'Show'}} Image
+        </button>
+    </th>
+    <th>Product</th>
+    <th>Code</th>
+    <th>Available</th>
+    <th>Price</th>
+    <th>5 Star Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        @for (product of filteredproducts; track product.productId){
+    
+    <tr>
+    <td>
+        <!-- @if (showImage){
+    <img  [src]="product.imageUrl" [title]="product.productName" style="width:75px;margin:2px"/>
+        }  -->
+      
+        <img *ngIf="showImage" [src]="product.imageUrl" [title]="product.productName" style="width:75px;margin:2px"/>
+             
+    </td>
+    <td><a [routerLink] = "['/products',product.productId]">{{product.productName}}</a></td>
+    <td>{{product.productCode}}</td>
+    <td>{{product.productAvailable}}</td>
+    <td>{{product.price}}</td>
+    <td><app-rating [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></app-rating></td>
+    
+    </tr>
+
+    }
+    </tbody>
+    </table>
+    </div>
+    
+    </div>
+    </div>

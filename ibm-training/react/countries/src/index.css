@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select {
+  @apply bg-blue-50 p-3 rounded-xl border-r-8 border-transparent outline-none;
+}
+
+.error {
+  @apply bg-red-50 p-3 rounded-xl text-red-600;
+}

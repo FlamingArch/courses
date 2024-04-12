@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+  --background: rgb(235, 245, 255);
+}
+
+body {
+  background: var(--background);
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background: white;
+  }
+  .grid-item-navigation {
+    position: static;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #0000;
+  }
+}
+
+.grid-item {
+  padding: 1rem;
+}
+
+.grid-item-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.grid-item-navigation {
+  grid-area: navigation;
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem;
+  background: white;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 100vmax;
+    transition: background-color 150ms ease;
+    &:hover {
+      background-color: rgb(182, 203, 226);
+    }
+  }
+
+  hr {
+    margin: 8px 0;
+    opacity: 0.2;
+  }
+}
+
+.grid-item-content {
+  grid-area: content;
+}
+
+.grid-item-sidebar {
+  grid-area: sidebar;
+}
+
+.grid-item-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 4.4rem 4.4rem auto;
+  grid-template-areas: "header" "content" "sidebar" "footer" "navigation";
+}
+
+.card {
+  width: 100%;
+  height: 20rem;
+  background-color: white;
+  box-shadow: 0px 12px 50px #0002;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 450px) {
+  .grid-container {
+    height: 100vh;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "navigation content sidebar"
+      "navigation footer footer";
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .grid-container {
+    height: 100vh;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "header header"
+      "navigation content"
+      "navigation sidebar"
+      "navigation footer";
+  }
+} */

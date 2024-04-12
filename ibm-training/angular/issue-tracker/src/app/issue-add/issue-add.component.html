@@ -1,0 +1,80 @@
+<main>
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="goBack()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <span>Add Issue</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+      (click)="clearFields()"
+    >
+      <mat-icon>clear_all</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+      (click)="submit()"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="title"
+        matInput
+        placeholder="A brief title of the Issue"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="description"
+        matInput
+        placeholder="A detailed description of the Issue"
+      ></textarea>
+    </mat-form-field>
+
+    <div>
+      <mat-label>Priority</mat-label>
+      <mat-radio-group
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="priority"
+        aria-label="Select an option"
+        class="example-full-width"
+      >
+        <mat-radio-button value="1">Low</mat-radio-button>
+        <mat-radio-button value="2">High</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <br />
+
+    <mat-form-field>
+      <mat-label>Issue Type</mat-label>
+      <mat-select
+        [ngModelOptions]="{ standalone: true }"
+        [(ngModel)]="type"
+        name="type"
+      >
+        @for (issue of issues; track issue) {
+        <mat-option [value]="issue.value">{{ issue.viewValue }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </form>
+</main>

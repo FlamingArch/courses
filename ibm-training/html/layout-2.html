@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Helvetica Neue", "Helvetica", "Segoe UI", Tahoma, Geneva,
+          Verdana, sans-serif;
+        text-align: justify;
+      }
+      header,
+      main,
+      nav {
+        border-bottom: 1px solid #0002;
+        display: flex;
+      }
+      header {
+        /* box-shadow: 0px 12px 50px #0001; */
+        position: sticky;
+        top: 0;
+        background-color: #fffc;
+        backdrop-filter: blur(16px);
+      }
+      article {
+        width: 0;
+        flex-grow: 1;
+      }
+      aside {
+        display: none;
+        width: 250px;
+      }
+      @media (min-width: 768px) {
+        aside {
+          display: block;
+        }
+        article {
+          border-right: 1px solid #0002;
+        }
+      }
+      nav,
+      header,
+      article,
+      footer,
+      aside {
+        padding: 1rem;
+      }
+      li {
+        padding: 0.5rem 1rem;
+        list-style-type: none;
+      }
+      h3 {
+        font-weight: normal;
+        font-size: 1.3rem;
+      }
+      .appicon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      #selected-nav {
+        background: #0044ff;
+        border-radius: 999rem;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <svg
+        class="appicon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M21 4H7C5.89543 4 5 4.89543 5 6C5 7.10457 5.89543 8 7 8H21V21C21 21.5523 20.5523 22 20 22H7C4.79086 22 3 20.2091 3 18V6C3 3.79086 4.79086 2 7 2H20C20.5523 2 21 2.44772 21 3V4ZM20 7H7C6.44772 7 6 6.55228 6 6C6 5.44772 6.44772 5 7 5H20V7Z"
+        ></path>
+      </svg>
+      <h3 id="toggleElement">Books</h3>
+    </nav>
+    <header>
+      <h1 id="toggleElement">Article Title</h1>
+    </header>
+    <main>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi
+          facere illo assumenda sapiente corrupti veritatis unde atque tempore
+          consectetur vitae accusantium porro dolor exercitationem nobis, modi
+          error quas corporis blanditiis sit tenetur harum asperiores nostrum.
+          Quis ad corrupti ea eum temporibus est natus pariatur blanditiis
+          dolores dolore vitae consequatur, accusantium aperiam iste sit
+          delectus cumque ullam ipsa doloremque recusandae. Obcaecati esse
+          similique molestias optio ad aliquid deleniti fuga eligendi
+          consequatur laboriosam laborum, quidem dolorum natus assumenda, cumque
+          rem cum.
+        </p>
+        <p>
+          Nam earum explicabo neque voluptatem officiis, ratione inventore quis
+          est fugit qui a eaque quos aut quas, corrupti quam eius dolorum dicta
+          expedita. Est ducimus minima molestias. Eaque vel distinctio ratione
+          vero inventore iure velit mollitia nulla fuga molestiae impedit in
+          beatae necessitatibus nihil, provident quis totam quidem? Quaerat
+          delectus facere quae aperiam quod asperiores aliquid aut nobis sunt
+          consequuntur. Blanditiis sunt fuga maxime omnis architecto harum
+          dolorem officia eos, rem molestias quae impedit. Dignissimos maiores
+          quis minima architecto quas.
+        </p>
+        <p>
+          Perferendis nisi odit blanditiis possimus libero aut sed animi sint
+          optio alias quibusdam repellendus, labore sit ipsa. Perspiciatis
+          aperiam iure quae itaque laudantium ea autem eos reprehenderit placeat
+          nobis distinctio, incidunt neque error voluptates quas alias in sint
+          doloremque aliquam recusandae dicta excepturi, esse unde. Delectus
+          neque illum culpa fuga, ipsa provident recusandae incidunt est commodi
+          libero, unde magni error ab fugiat nemo fugit amet assumenda vitae
+          dignissimos eveniet similique eligendi excepturi. Dolores quam, quo
+          nam repellat eveniet labore in!
+        </p>
+        <p>
+          Numquam beatae atque dicta facere commodi, nobis illo deleniti
+          laudantium natus molestias dolorem illum. Eveniet, laborum dicta,
+          deserunt recusandae voluptatum sit iste necessitatibus consequatur
+          nisi quis quam error sapiente autem deleniti, ratione explicabo.
+          Praesentium, reiciendis! Reprehenderit consequatur error dolore
+          doloremque voluptatum accusamus ducimus. Dignissimos officia hic eos
+          sint facilis! Aliquid ut ratione eius impedit iure voluptate, dolorem,
+          alias placeat officiis provident iusto quam dolore voluptatibus
+          mollitia possimus, tempora rerum facere similique libero animi ipsum
+          ducimus temporibus? Iusto, eius doloremque! Cum!
+        </p>
+        <p>
+          Necessitatibus officiis error omnis libero ratione iure vero quisquam
+          aliquam assumenda voluptates, velit laborum atque qui quae. Maiores
+          quae saepe iste dolorum quisquam nemo praesentium veniam qui. Itaque
+          nihil laborum illo hic omnis magnam minus reiciendis et expedita
+          facilis. Sapiente, corrupti laborum. Sed fugit id dolorem amet
+          perspiciatis eligendi harum recusandae totam suscipit assumenda nobis
+          animi a provident aut odio tenetur, architecto obcaecati corporis
+          magnam natus magni unde quos! At iure nobis quos? Ducimus esse
+          repellat alias reprehenderit nihil! Beatae.
+        </p>
+        <p>
+          Necessitatibus officiis error omnis libero ratione iure vero quisquam
+          aliquam assumenda voluptates, velit laborum atque qui quae. Maiores
+          quae saepe iste dolorum quisquam nemo praesentium veniam qui. Itaque
+          nihil laborum illo hic omnis magnam minus reiciendis et expedita
+          facilis. Sapiente, corrupti laborum. Sed fugit id dolorem amet
+          perspiciatis eligendi harum recusandae totam suscipit assumenda nobis
+          animi a provident aut odio tenetur, architecto obcaecati corporis
+          magnam natus magni unde quos! At iure nobis quos? Ducimus esse
+          repellat alias reprehenderit nihil! Beatae.
+        </p>
+      </article>
+      <aside>
+        <ul>
+          <li id="selected-nav">Sample 1</li>
+          <li>Sample 2</li>
+          <li>Sample 3</li>
+          <li>Sample 4</li>
+        </ul>
+      </aside>
+    </main>
+    <footer>© Lorem Ipsum, 2023</footer>
+    <script></script>
+  </body>
+</html>

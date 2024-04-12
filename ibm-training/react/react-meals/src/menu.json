@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Sushi",
+    "description": "Finest Fish and Veggies",
+    "price": 29.99,
+    "available": 10
+  },
+  {
+    "title": "Schnitzel",
+    "description": "A german specialty!",
+    "price": 16.5,
+    "available": 0
+  },
+  {
+    "title": "Barbecue Burger",
+    "description": "American, raw, tasty",
+    "price": 19.99,
+    "available": 30
+  },
+  {
+    "title": "Green Bowl",
+    "description": "Healthy...and green...",
+    "price": 18.99,
+    "available": 5
+  }
+]
