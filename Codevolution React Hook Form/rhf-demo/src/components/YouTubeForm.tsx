@@ -6,6 +6,7 @@ import {
   useForm,
 } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import { useEffect } from "react";
 // import { useEffect } from "react";
 
 let renderCount = 0;
@@ -24,7 +25,7 @@ type FormValues = {
   dob: Date;
 };
 
-export const YouTubeForm = () => {
+const YouTubeForm = () => {
   // const form = useForm<FormValues>();
   // const form = useForm({
   //   defaultValues: {
@@ -59,6 +60,7 @@ export const YouTubeForm = () => {
       age: 0,
       dob: new Date(),
     },
+    mode: "onBlur", // Trigger validation onBlur of form field instead of onChange
   });
 
   const {
@@ -66,21 +68,23 @@ export const YouTubeForm = () => {
     control,
     handleSubmit,
     formState,
-    watch,
+    // watch,
     // getValues,
-    setValue,
+    // setValue,
+    reset,
+    trigger, // Manually trigger all form validations.
   } = form;
 
   const {
     errors,
-    touchedFields,
-    dirtyFields,
+    // touchedFields,
+    // dirtyFields,
     isDirty,
     isValid,
     isSubmitting,
-    isSubmitted,
+    // isSubmitted,
     isSubmitSuccessful,
-    submitCount,
+    // submitCount,
   } = formState;
 
   // isSubmitting: False initially, is set to true when forms begin to be submitted, then false again when form submission has completed.
@@ -93,6 +97,14 @@ export const YouTubeForm = () => {
     name: "phNumbers",
     control,
   });
+
+  // It is recommended to not call the reset method inside the onSubmit function.
+  // Instead, use the isSubmitSuccessful flag, to call it inside a useEffect
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful]);
 
   const onSubmit = (data: FormValues) => {
     console.log("Form Submitted: ", data);
@@ -132,6 +144,7 @@ export const YouTubeForm = () => {
 
   // const { name, ref, onChange, onBlur } = register("username");
   // noValidate: Prevent Browser Validation
+  // Reset doesn't set values as undefined, but sets it to the initial values.
 
   renderCount++;
   return (
@@ -177,6 +190,13 @@ export const YouTubeForm = () => {
                     !fieldValue.endsWith("baddomain.com") ||
                     "This domain is not supported"
                   );
+                },
+                emailAvailable: async (fieldValue) => {
+                  const response = await fetch(
+                    `https://jsonplaceholder.typicode.com/users?email=${fieldValue}`
+                  );
+                  const data = await response.json();
+                  return data.length == 0 || "Email already exists";
                 },
               },
             })}
@@ -293,14 +313,22 @@ export const YouTubeForm = () => {
         </div>
 
         <button disabled={!isDirty || !isValid || isSubmitting}>Submit</button>
+        <button type="button" onClick={() => reset()}>
+          Reset
+        </button>
         {/* <button type="button" onClick={handleGetValues}>
           Get Values
         </button> */}
         {/* <button type="button" onClick={handleSetValues}>
           Set Value
         </button> */}
+        <button type="button" onClick={() => trigger()}>
+          Validate
+        </button>
       </form>
       <DevTool control={control} />
     </div>
   );
 };
+
+export default YouTubeForm;

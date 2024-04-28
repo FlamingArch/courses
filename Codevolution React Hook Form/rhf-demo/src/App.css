@@ -1,5 +1,6 @@
 #root {
   max-width: 1280px;
+  flex-grow: 1;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -16,7 +17,7 @@ input [type="email"],
 input [type="number"],
 input [type="data"] {
   display: block;
-  width: 400px;
+  width: clamp(400px, 90vw, 1200px);
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -34,4 +35,6 @@ input [type="data"] {
 
 .form-control {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
