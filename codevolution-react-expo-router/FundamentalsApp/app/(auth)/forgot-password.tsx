@@ -1,16 +1,10 @@
-import { Redirect } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
-export default function Profile() {
-  const isLoggedIn = false;
-
-  if (!isLoggedIn) {
-    return <Redirect href="/login" />;
-  }
-
+export default function ForgotPassword() {
   return (
     <View style={styles.container}>
-      <Text>Profile Page</Text>
+      <Text>ForgotPassword</Text>
     </View>
   );
 }
