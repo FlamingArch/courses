@@ -1,0 +1,19 @@
+<div>
+  <!-- Event Binding -->
+  <button (click)="onSelectUser()">
+    <!--String Interpolation not recommended for properties-->
+    <!-- <img src="{{selectedUser.avatar}}" alt="" /> -->
+
+    <!--Property Binding-->
+    <!-- <img
+    [src]="'assets/users/' + selectedUser.avatar"
+    [alt]="selectedUser.name"
+    /> -->
+
+    <!-- Property Binding Using Getter -->
+    <img [src]="imagePath" [alt]="selectedUser.name" />
+
+    <!--String Interpolation-->
+    <span>{{ selectedUser.name }}</span>
+  </button>
+</div>
