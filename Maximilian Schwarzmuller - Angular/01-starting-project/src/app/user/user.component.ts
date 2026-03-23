@@ -11,7 +11,8 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  // private selectedUser = DUMMY_USERS[randomIndex] // Private property is not available for use in the template
+  // Private property is not available for use in the template
+  // private selectedUser = DUMMY_USERS[randomIndex] /
   selectedUser = DUMMY_USERS[randomIndex];
 
   get imagePath() {
@@ -19,6 +20,8 @@ export class UserComponent {
   }
 
   onSelectUser() {
-    console.log('Clicked!');
+    // Regenerating, as the global one is only ran once and doesnt change
+    const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length); 
+    this.selectedUser = DUMMY_USERS[randomIndex];
   }
 }
